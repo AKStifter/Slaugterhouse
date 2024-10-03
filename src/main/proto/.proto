@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package slaughterhouse;
+
+option java_package = "com.example.grpc";
+option java_outer_classname = "SlaughterhouseProto";
+
+// Message definitions
+message Animal {
+    int32 id = 1;
+    string registration_number = 2;
+    string species = 3;
+    double weight = 4;
+}
+
+message Product {
+    int32 id = 1;
+    repeated int32 animal_ids = 2;
+}
+
+// Service definition
+service SlaughterhouseService {
+    rpc GetAnimalInfo (Product) returns (Animal);
+    rpc GetProductInfo (Animal) returns (Product);
+
+}
