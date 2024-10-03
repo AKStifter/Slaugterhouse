@@ -21,7 +21,7 @@ public class SlaughterhouseServer
   public static void main(String[] args)
       throws IOException, InterruptedException
   {
-    // Populate the database
+
     initializeData();
 
     // gRPC server running on port 50051
@@ -39,7 +39,7 @@ public class SlaughterhouseServer
 
   private static void initializeData()
   {
-    // Adding sample animals
+    // Adding sample shit
     animals.put(1,
         Animal.newBuilder().setId(1).setRegistrationNumber("ANIMAL001")
             .setSpecies("Cow").setWeight(500).build());
@@ -47,7 +47,7 @@ public class SlaughterhouseServer
         Animal.newBuilder().setId(2).setRegistrationNumber("ANIMAL002")
             .setSpecies("Pig").setWeight(250).build());
 
-    // Adding sample products (each associated with animals)
+    // Adding sample products (associated with animals)
     products.put(1, Product.newBuilder().setId(1).addAnimalIds(1).build());
     products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
   }
