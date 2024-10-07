@@ -2,6 +2,11 @@ package org.example;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import io.grpc.stub.StreamObserver;
 import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
@@ -15,6 +20,12 @@ public class SlaughterhouseServer
 {
 
   // Simulated database
+  private static Connection connect() throws SQLException {
+    String url = "jdbc:postgresql://localhost:5432/slaughterhouse";
+    String user = "Cow_man";
+    String password = "secret";
+    return DriverManager.getConnection(url, user, password);
+  }
   private static Map<Integer, Animal> animals = new HashMap<>();
   private static Map<Integer, Product> products = new HashMap<>();
 
