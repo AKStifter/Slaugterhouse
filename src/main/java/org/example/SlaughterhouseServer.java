@@ -24,14 +24,13 @@ public class SlaughterhouseServer
 
     initializeData();
 
-    // gRPC server running on port 50051
     Server server = ServerBuilder.forPort(50051).addService(
             new SlaughterhouseServiceImpl())  // implementation for the services
         .build();
 
     // Start the server
     server.start();
-    System.out.println("Server started on port 50051");
+    System.out.println("Server started: ======>");
 
     // Await termination
     server.awaitTermination();
