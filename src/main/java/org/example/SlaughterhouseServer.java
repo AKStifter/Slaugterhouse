@@ -89,7 +89,7 @@ public class SlaughterhouseServer
       }
     }
     // Adding sample shit
-   /* animals.put(1,
+    animals.put(1,
         Animal.newBuilder().setId(1).setRegistrationNumber("ANIMAL001")
             .setSpecies("Cow").setWeight(500).build());
     animals.put(2,
@@ -98,7 +98,7 @@ public class SlaughterhouseServer
 
     // Adding sample products (associated with animals)
     products.put(1, Product.newBuilder().setId(1).addAnimalIds(1).build());
-   */  //products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
+    products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
   }
 
   static class SlaughterhouseServiceImpl
