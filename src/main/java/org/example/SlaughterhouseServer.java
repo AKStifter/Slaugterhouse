@@ -15,23 +15,25 @@ import com.example.grpc.SlaughterhouseServiceGrpc;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
+
+import static java.lang.Thread.sleep;
 
 public class SlaughterhouseServer
 {
 
   // Simulated database
   private static Connection connect() throws SQLException {
-    String url = "jdbc:postgresql://localhost:5432/slaughterhouse";
-    String user = "Cow_man";
-    String password = "secret";
+    String url = "jdbc:postgresql://localhost:5432/postgres";
+    String user = "postgres";
+    String password = "451311";
     return DriverManager.getConnection(url, user, password);
   }
   private static Map<Integer, Animal> animals = new HashMap<>();
   private static Map<Integer, Product> products = new HashMap<>();
 
   public static void main(String[] args)
-      throws IOException, InterruptedException
-  {
+          throws IOException, InterruptedException, SQLException {
 
     initializeData();
 
@@ -41,16 +43,53 @@ public class SlaughterhouseServer
 
     // Start the server
     server.start();
-    System.out.println("Server started: ======>");
+    System.out.println("Server started please wait:");
+    sleep(1000);
+    System.out.println("Welcome to the Slaughterhouse! ");
+
+    for (Animal animal : animals.values()) {
+      System.out.println("Loaded Animal: ID=" + animal.getId() + ", Species=" + animal.getSpecies() + ", Weight=" + animal.getWeight());
+    }
+
+
+
+    // Stop the server
+    server.shutdownNow();
+    Scanner scanner = new Scanner(System.in);
+    if(scanner.nextLine().equalsIgnoreCase("exit"))
+      System.out.println("Shutting down the server...");
 
     // Await termination
     server.awaitTermination();
   }
 
-  private static void initializeData()
-  {
+  private static void initializeData() throws SQLException {
+
+    try (Connection connection = connect()) {
+      String animalQuery = "SELECT  ID, Species,Weight  FROM slaughterhouse.animal";
+      try {
+        PreparedStatement statement = connection.prepareStatement(animalQuery);
+        ResultSet resultSet = statement.executeQuery();
+        while (resultSet.next()) {
+          int id = resultSet.getInt("id");
+          String species = resultSet.getString("species");
+          double weight = resultSet.getDouble("weight");
+          animals.put(id, Animal.newBuilder().setId(id).setSpecies(species)
+             .setWeight(weight).build());
+
+
+        }
+
+        resultSet.close();
+
+
+      }
+      catch (SQLException e) {
+        e.printStackTrace();
+      }
+    }
     // Adding sample shit
-    animals.put(1,
+   /* animals.put(1,
         Animal.newBuilder().setId(1).setRegistrationNumber("ANIMAL001")
             .setSpecies("Cow").setWeight(500).build());
     animals.put(2,
@@ -59,7 +98,7 @@ public class SlaughterhouseServer
 
     // Adding sample products (associated with animals)
     products.put(1, Product.newBuilder().setId(1).addAnimalIds(1).build());
-    products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
+   */  //products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
   }
 
   static class SlaughterhouseServiceImpl
@@ -67,7 +106,7 @@ public class SlaughterhouseServer
   {
 
     @Override public void getAnimalInfo(Product request,
-        StreamObserver<Animal> responseObserver)
+        StreamObserver<Animal> responseObserver) // client gets the information about animals
     {
       if (request.getAnimalIdsCount() > 0)
       {
