@@ -73,7 +73,7 @@ public class SlaughterhouseServer
       {
         int animalId = request.getAnimalIds(0);  // Get the first animal ID
         Animal animal = animals.get(
-            animalId);   // Retrieve animal from the "database"
+            animalId);   // from the "database"
 
         if (animal != null)
         {
