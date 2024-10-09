@@ -2,11 +2,9 @@ package org.example;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
+import java.sql.*;
+
 import io.grpc.stub.StreamObserver;
 import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
@@ -46,16 +44,23 @@ public class SlaughterhouseServer
     System.out.println("Server started please wait:");
     sleep(1000);
     System.out.println("Welcome to the Slaughterhouse! ");
+    sleep(1000);
+    System.out.println("To view current animal livestock, press C to continue:");
+     Scanner scanner = new Scanner(System.in);
+     if (scanner.nextLine().equalsIgnoreCase("C")) {
 
-    for (Animal animal : animals.values()) {
+
+
+    for (Animal animal : animals.values())
       System.out.println("Loaded Animal: ID=" + animal.getId() + ", Species=" + animal.getSpecies() + ", Weight=" + animal.getWeight());
     }
 
 
 
+
     // Stop the server
     server.shutdownNow();
-    Scanner scanner = new Scanner(System.in);
+    //Scanner scanner = new Scanner(System.in);
     if(scanner.nextLine().equalsIgnoreCase("exit"))
       System.out.println("Shutting down the server...");
 
