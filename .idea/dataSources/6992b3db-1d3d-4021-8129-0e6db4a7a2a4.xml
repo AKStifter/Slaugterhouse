@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="Slaughterhouse">
+<dataSource name="postgres@localhost">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>6670</IntrospectionStateNumber>
+      <IntrospectionStateNumber>6714</IntrospectionStateNumber>
       <ServerVersion>16.1</ServerVersion>
       <StartupTime>1728375394</StartupTime>
       <TimeZones>true ACDT
@@ -810,9 +802,6 @@ false Zulu
 2200||6171|C|G
 2200||-9223372036854775808|U|G
 2200||6171|U|G
-14650||10|C|G
-14650||-9223372036854775808|U|G
-14650||10|U|G
 14697||10|C|G
 14697||-9223372036854775808|U|G
 14697||10|U|G
@@ -820,7 +809,7 @@ false Zulu
 34142||10|C|G
 34142||-9223372036854775808|U|G
 34142||10|U|G</Grants>
-      <IntrospectionStateNumber>6670</IntrospectionStateNumber>
+      <IntrospectionStateNumber>6714</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4272,1207 +4261,6 @@ false Zulu
     </schema>
     <schema id="269" parent="3" name="pg_catalog">
       <Comment>system catalog schema</Comment>
-      <Grants>764||10|X|G
-765||10|X|G
-767||10|X|G
-826||10|d|G
-826||10|a|G
-826||10|x|G
-826||-9223372036854775808|r|G
-826||10|r|G
-826||10|t|G
-826||10|D|G
-826||10|w|G
-1213||10|d|G
-1213||10|a|G
-1213||10|x|G
-1213||-9223372036854775808|r|G
-1213||10|r|G
-1213||10|t|G
-1213||10|D|G
-1213||10|w|G
-1214||10|d|G
-1214||10|a|G
-1214||10|x|G
-1214||-9223372036854775808|r|G
-1214||10|r|G
-1214||10|t|G
-1214||10|D|G
-1214||10|w|G
-1247||10|d|G
-1247||10|a|G
-1247||10|x|G
-1247||-9223372036854775808|r|G
-1247||10|r|G
-1247||10|t|G
-1247||10|D|G
-1247||10|w|G
-1249||10|d|G
-1249||10|a|G
-1249||10|x|G
-1249||-9223372036854775808|r|G
-1249||10|r|G
-1249||10|t|G
-1249||10|D|G
-1249||10|w|G
-1255||10|d|G
-1255||10|a|G
-1255||10|x|G
-1255||-9223372036854775808|r|G
-1255||10|r|G
-1255||10|t|G
-1255||10|D|G
-1255||10|w|G
-1259||10|d|G
-1259||10|a|G
-1259||10|x|G
-1259||-9223372036854775808|r|G
-1259||10|r|G
-1259||10|t|G
-1259||10|D|G
-1259||10|w|G
-1260||10|d|G
-1260||10|a|G
-1260||10|x|G
-1260||10|r|G
-1260||10|t|G
-1260||10|D|G
-1260||10|w|G
-1261||10|d|G
-1261||10|a|G
-1261||10|x|G
-1261||-9223372036854775808|r|G
-1261||10|r|G
-1261||10|t|G
-1261||10|D|G
-1261||10|w|G
-1262||10|d|G
-1262||10|a|G
-1262||10|x|G
-1262||-9223372036854775808|r|G
-1262||10|r|G
-1262||10|t|G
-1262||10|D|G
-1262||10|w|G
-1417||10|d|G
-1417||10|a|G
-1417||10|x|G
-1417||-9223372036854775808|r|G
-1417||10|r|G
-1417||10|t|G
-1417||10|D|G
-1417||10|w|G
-1418||10|d|G
-1418||10|a|G
-1418||10|x|G
-1418||10|r|G
-1418||10|t|G
-1418||10|D|G
-1418||10|w|G
-2172||10|X|G
-2224||10|d|G
-2224||10|a|G
-2224||10|x|G
-2224||-9223372036854775808|r|G
-2224||10|r|G
-2224||10|t|G
-2224||10|D|G
-2224||10|w|G
-2274||10|X|G
-2282||10|X|G
-2282||3375|X|G
-2307||10|X|G
-2328||10|d|G
-2328||10|a|G
-2328||10|x|G
-2328||-9223372036854775808|r|G
-2328||10|r|G
-2328||10|t|G
-2328||10|D|G
-2328||10|w|G
-2396||10|d|G
-2396||10|a|G
-2396||10|x|G
-2396||-9223372036854775808|r|G
-2396||10|r|G
-2396||10|t|G
-2396||10|D|G
-2396||10|w|G
-2600||10|d|G
-2600||10|a|G
-2600||10|x|G
-2600||-9223372036854775808|r|G
-2600||10|r|G
-2600||10|t|G
-2600||10|D|G
-2600||10|w|G
-2601||10|d|G
-2601||10|a|G
-2601||10|x|G
-2601||-9223372036854775808|r|G
-2601||10|r|G
-2601||10|t|G
-2601||10|D|G
-2601||10|w|G
-2602||10|d|G
-2602||10|a|G
-2602||10|x|G
-2602||-9223372036854775808|r|G
-2602||10|r|G
-2602||10|t|G
-2602||10|D|G
-2602||10|w|G
-2603||10|d|G
-2603||10|a|G
-2603||10|x|G
-2603||-9223372036854775808|r|G
-2603||10|r|G
-2603||10|t|G
-2603||10|D|G
-2603||10|w|G
-2604||10|d|G
-2604||10|a|G
-2604||10|x|G
-2604||-9223372036854775808|r|G
-2604||10|r|G
-2604||10|t|G
-2604||10|D|G
-2604||10|w|G
-2605||10|d|G
-2605||10|a|G
-2605||10|x|G
-2605||-9223372036854775808|r|G
-2605||10|r|G
-2605||10|t|G
-2605||10|D|G
-2605||10|w|G
-2606||10|d|G
-2606||10|a|G
-2606||10|x|G
-2606||-9223372036854775808|r|G
-2606||10|r|G
-2606||10|t|G
-2606||10|D|G
-2606||10|w|G
-2607||10|d|G
-2607||10|a|G
-2607||10|x|G
-2607||-9223372036854775808|r|G
-2607||10|r|G
-2607||10|t|G
-2607||10|D|G
-2607||10|w|G
-2608||10|d|G
-2608||10|a|G
-2608||10|x|G
-2608||-9223372036854775808|r|G
-2608||10|r|G
-2608||10|t|G
-2608||10|D|G
-2608||10|w|G
-2609||10|d|G
-2609||10|a|G
-2609||10|x|G
-2609||-9223372036854775808|r|G
-2609||10|r|G
-2609||10|t|G
-2609||10|D|G
-2609||10|w|G
-2610||10|d|G
-2610||10|a|G
-2610||10|x|G
-2610||-9223372036854775808|r|G
-2610||10|r|G
-2610||10|t|G
-2610||10|D|G
-2610||10|w|G
-2611||10|d|G
-2611||10|a|G
-2611||10|x|G
-2611||-9223372036854775808|r|G
-2611||10|r|G
-2611||10|t|G
-2611||10|D|G
-2611||10|w|G
-2612||10|d|G
-2612||10|a|G
-2612||10|x|G
-2612||-9223372036854775808|r|G
-2612||10|r|G
-2612||10|t|G
-2612||10|D|G
-2612||10|w|G
-2613||10|d|G
-2613||10|a|G
-2613||10|x|G
-2613||10|r|G
-2613||10|t|G
-2613||10|D|G
-2613||10|w|G
-2615||10|d|G
-2615||10|a|G
-2615||10|x|G
-2615||-9223372036854775808|r|G
-2615||10|r|G
-2615||10|t|G
-2615||10|D|G
-2615||10|w|G
-2616||10|d|G
-2616||10|a|G
-2616||10|x|G
-2616||-9223372036854775808|r|G
-2616||10|r|G
-2616||10|t|G
-2616||10|D|G
-2616||10|w|G
-2617||10|d|G
-2617||10|a|G
-2617||10|x|G
-2617||-9223372036854775808|r|G
-2617||10|r|G
-2617||10|t|G
-2617||10|D|G
-2617||10|w|G
-2618||10|d|G
-2618||10|a|G
-2618||10|x|G
-2618||-9223372036854775808|r|G
-2618||10|r|G
-2618||10|t|G
-2618||10|D|G
-2618||10|w|G
-2619||10|d|G
-2619||10|a|G
-2619||10|x|G
-2619||10|r|G
-2619||10|t|G
-2619||10|D|G
-2619||10|w|G
-2620||10|d|G
-2620||10|a|G
-2620||10|x|G
-2620||-9223372036854775808|r|G
-2620||10|r|G
-2620||10|t|G
-2620||10|D|G
-2620||10|w|G
-2621||10|X|G
-2622||10|X|G
-2623||10|X|G
-2624||10|X|G
-2625||10|X|G
-2739||10|X|G
-2753||10|d|G
-2753||10|a|G
-2753||10|x|G
-2753||-9223372036854775808|r|G
-2753||10|r|G
-2753||10|t|G
-2753||10|D|G
-2753||10|w|G
-2848||10|X|G
-2964||10|d|G
-2964||10|a|G
-2964||10|x|G
-2964||-9223372036854775808|r|G
-2964||10|r|G
-2964||10|t|G
-2964||10|D|G
-2964||10|w|G
-2995||10|d|G
-2995||10|a|G
-2995||10|x|G
-2995||-9223372036854775808|r|G
-2995||10|r|G
-2995||10|t|G
-2995||10|D|G
-2995||10|w|G
-3071||10|X|G
-3072||10|X|G
-3079||10|d|G
-3079||10|a|G
-3079||10|x|G
-3079||-9223372036854775808|r|G
-3079||10|r|G
-3079||10|t|G
-3079||10|D|G
-3079||10|w|G
-3098||10|X|G
-3118||10|d|G
-3118||10|a|G
-3118||10|x|G
-3118||-9223372036854775808|r|G
-3118||10|r|G
-3118||10|t|G
-3118||10|D|G
-3118||10|w|G
-3256||10|d|G
-3256||10|a|G
-3256||10|x|G
-3256||-9223372036854775808|r|G
-3256||10|r|G
-3256||10|t|G
-3256||10|D|G
-3256||10|w|G
-3293||10|X|G
-3295||10|X|G
-3297||10|X|G
-3307||10|X|G
-3329||10|X|G
-3350||10|d|G
-3350||10|a|G
-3350||10|x|G
-3350||-9223372036854775808|r|G
-3350||10|r|G
-3350||10|t|G
-3350||10|D|G
-3350||10|w|G
-3353||10|X|G
-3353||3373|X|G
-3354||10|X|G
-3354||3373|X|G
-3381||10|d|G
-3381||10|a|G
-3381||10|x|G
-3381||-9223372036854775808|r|G
-3381||10|r|G
-3381||10|t|G
-3381||10|D|G
-3381||10|w|G
-3394||10|d|G
-3394||10|a|G
-3394||10|x|G
-3394||-9223372036854775808|r|G
-3394||10|r|G
-3394||10|t|G
-3394||10|D|G
-3394||10|w|G
-3400||10|X|G
-3401||10|X|G
-3429||10|d|G
-3429||10|a|G
-3429||10|x|G
-3429||10|r|G
-3429||10|t|G
-3429||10|D|G
-3429||10|w|G
-3436||10|X|G
-3456||10|d|G
-3456||10|a|G
-3456||10|x|G
-3456||-9223372036854775808|r|G
-3456||10|r|G
-3456||10|t|G
-3456||10|D|G
-3456||10|w|G
-3466||10|d|G
-3466||10|a|G
-3466||10|x|G
-3466||-9223372036854775808|r|G
-3466||10|r|G
-3466||10|t|G
-3466||10|D|G
-3466||10|w|G
-3501||10|d|G
-3501||10|a|G
-3501||10|x|G
-3501||-9223372036854775808|r|G
-3501||10|r|G
-3501||10|t|G
-3501||10|D|G
-3501||10|w|G
-3541||10|d|G
-3541||10|a|G
-3541||10|x|G
-3541||-9223372036854775808|r|G
-3541||10|r|G
-3541||10|t|G
-3541||10|D|G
-3541||10|w|G
-3576||10|d|G
-3576||10|a|G
-3576||10|x|G
-3576||-9223372036854775808|r|G
-3576||10|r|G
-3576||10|t|G
-3576||10|D|G
-3576||10|w|G
-3592||10|d|G
-3592||10|a|G
-3592||10|x|G
-3592||-9223372036854775808|r|G
-3592||10|r|G
-3592||10|t|G
-3592||10|D|G
-3592||10|w|G
-3596||10|d|G
-3596||10|a|G
-3596||10|x|G
-3596||-9223372036854775808|r|G
-3596||10|r|G
-3596||10|t|G
-3596||10|D|G
-3596||10|w|G
-3600||10|d|G
-3600||10|a|G
-3600||10|x|G
-3600||-9223372036854775808|r|G
-3600||10|r|G
-3600||10|t|G
-3600||10|D|G
-3600||10|w|G
-3601||10|d|G
-3601||10|a|G
-3601||10|x|G
-3601||-9223372036854775808|r|G
-3601||10|r|G
-3601||10|t|G
-3601||10|D|G
-3601||10|w|G
-3602||10|d|G
-3602||10|a|G
-3602||10|x|G
-3602||-9223372036854775808|r|G
-3602||10|r|G
-3602||10|t|G
-3602||10|D|G
-3602||10|w|G
-3603||10|d|G
-3603||10|a|G
-3603||10|x|G
-3603||-9223372036854775808|r|G
-3603||10|r|G
-3603||10|t|G
-3603||10|D|G
-3603||10|w|G
-3764||10|d|G
-3764||10|a|G
-3764||10|x|G
-3764||-9223372036854775808|r|G
-3764||10|r|G
-3764||10|t|G
-3764||10|D|G
-3764||10|w|G
-3775||10|X|G
-3776||10|X|G
-3777||10|X|G
-3800||10|X|G
-3800||3373|X|G
-3801||10|X|G
-3801||3373|X|G
-3826||10|X|G
-3827||10|X|G
-3828||10|X|G
-4543||10|X|G
-5029||10|X|G
-5029||3373|X|G
-5030||10|X|G
-5030||3373|X|G
-5031||10|X|G
-5031||3373|X|G
-5052||10|X|G
-5052||3375|X|G
-6000||10|d|G
-6000||10|a|G
-6000||10|x|G
-6000||-9223372036854775808|r|G
-6000||10|r|G
-6000||10|t|G
-6000||10|D|G
-6000||10|w|G
-6003||10|X|G
-6004||10|X|G
-6005||10|X|G
-6006||10|X|G
-6007||10|X|G
-6008||10|X|G
-6009||10|X|G
-6010||10|X|G
-6011||10|X|G
-6012||10|X|G
-6013||10|X|G
-6014||10|X|G
-6100||10|d|G
-6100||10|a|G
-6100||10|x|G
-6100||10|r|G
-6100|1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,18|-9223372036854775808|r|G
-6100||10|t|G
-6100||10|D|G
-6100||10|w|G
-6102||10|d|G
-6102||10|a|G
-6102||10|x|G
-6102||-9223372036854775808|r|G
-6102||10|r|G
-6102||10|t|G
-6102||10|D|G
-6102||10|w|G
-6104||10|d|G
-6104||10|a|G
-6104||10|x|G
-6104||-9223372036854775808|r|G
-6104||10|r|G
-6104||10|t|G
-6104||10|D|G
-6104||10|w|G
-6106||10|d|G
-6106||10|a|G
-6106||10|x|G
-6106||-9223372036854775808|r|G
-6106||10|r|G
-6106||10|t|G
-6106||10|D|G
-6106||10|w|G
-6170||10|X|G
-6208||10|X|G
-6209||10|X|G
-6230||10|X|G
-6232||10|X|G
-6237||10|d|G
-6237||10|a|G
-6237||10|x|G
-6237||-9223372036854775808|r|G
-6237||10|r|G
-6237||10|t|G
-6237||10|D|G
-6237||10|w|G
-6243||10|d|G
-6243||10|a|G
-6243||10|x|G
-6243||-9223372036854775808|r|G
-6243||10|r|G
-6243||10|t|G
-6243||10|D|G
-6243||10|w|G
-6250||10|X|G
-6270||10|X|G
-6270||3373|X|G
-6271||10|X|G
-6271||3373|X|G
-6272||10|X|G
-6272||3373|X|G
-6305||10|X|G
-12000||10|d|G
-12000||10|a|G
-12000||10|x|G
-12000||-9223372036854775808|r|G
-12000||10|r|G
-12000||10|t|G
-12000||10|D|G
-12000||10|w|G
-12005||10|d|G
-12005||10|a|G
-12005||10|x|G
-12005||10|r|G
-12005||10|t|G
-12005||10|D|G
-12005||10|w|G
-12010||10|d|G
-12010||10|a|G
-12010||10|x|G
-12010||-9223372036854775808|r|G
-12010||10|r|G
-12010||10|t|G
-12010||10|D|G
-12010||10|w|G
-12014||10|d|G
-12014||10|a|G
-12014||10|x|G
-12014||-9223372036854775808|r|G
-12014||10|r|G
-12014||10|t|G
-12014||10|D|G
-12014||10|w|G
-12018||10|d|G
-12018||10|a|G
-12018||10|x|G
-12018||-9223372036854775808|r|G
-12018||10|r|G
-12018||10|t|G
-12018||10|D|G
-12018||10|w|G
-12023||10|d|G
-12023||10|a|G
-12023||10|x|G
-12023||-9223372036854775808|r|G
-12023||10|r|G
-12023||10|t|G
-12023||10|D|G
-12023||10|w|G
-12028||10|d|G
-12028||10|a|G
-12028||10|x|G
-12028||-9223372036854775808|r|G
-12028||10|r|G
-12028||10|t|G
-12028||10|D|G
-12028||10|w|G
-12033||10|d|G
-12033||10|a|G
-12033||10|x|G
-12033||-9223372036854775808|r|G
-12033||10|r|G
-12033||10|t|G
-12033||10|D|G
-12033||10|w|G
-12038||10|d|G
-12038||10|a|G
-12038||10|x|G
-12038||-9223372036854775808|r|G
-12038||10|r|G
-12038||10|t|G
-12038||10|D|G
-12038||10|w|G
-12043||10|d|G
-12043||10|a|G
-12043||10|x|G
-12043||-9223372036854775808|r|G
-12043||10|r|G
-12043||10|t|G
-12043||10|D|G
-12043||10|w|G
-12048||10|d|G
-12048||10|a|G
-12048||10|x|G
-12048||-9223372036854775808|r|G
-12048||10|r|G
-12048||10|t|G
-12048||10|D|G
-12048||10|w|G
-12053||10|d|G
-12053||10|a|G
-12053||10|x|G
-12053||-9223372036854775808|r|G
-12053||10|r|G
-12053||10|t|G
-12053||10|D|G
-12053||10|w|G
-12058||10|d|G
-12058||10|a|G
-12058||10|x|G
-12058||-9223372036854775808|r|G
-12058||10|r|G
-12058||10|t|G
-12058||10|D|G
-12058||10|w|G
-12063||10|d|G
-12063||10|a|G
-12063||10|x|G
-12063||-9223372036854775808|r|G
-12063||10|r|G
-12063||10|t|G
-12063||10|D|G
-12063||10|w|G
-12068||10|d|G
-12068||10|a|G
-12068||10|x|G
-12068||-9223372036854775808|r|G
-12068||10|r|G
-12068||10|t|G
-12068||10|D|G
-12068||10|w|G
-12073||10|d|G
-12073||10|a|G
-12073||10|x|G
-12073||-9223372036854775808|r|G
-12073||10|r|G
-12073||10|t|G
-12073||10|D|G
-12073||10|w|G
-12077||10|d|G
-12077||10|a|G
-12077||10|x|G
-12077||-9223372036854775808|r|G
-12077||10|r|G
-12077||10|t|G
-12077||10|D|G
-12077||10|w|G
-12081||10|d|G
-12081||10|a|G
-12081||10|x|G
-12081||-9223372036854775808|r|G
-12081||10|r|G
-12081||10|t|G
-12081||10|D|G
-12081||10|w|G
-12085||10|d|G
-12085||10|a|G
-12085||10|x|G
-12085||-9223372036854775808|r|G
-12085||10|r|G
-12085||10|t|G
-12085||10|D|G
-12085||10|w|G
-12090||10|d|G
-12090||10|a|G
-12090||10|x|G
-12090||-9223372036854775808|r|G
-12090||10|r|G
-12090||10|t|G
-12090||10|D|G
-12090||10|w|G
-12095||10|d|G
-12095||10|a|G
-12095||10|x|G
-12095||-9223372036854775808|r|G
-12095||10|r|G
-12095||10|t|G
-12095||10|D|G
-12095||10|w|G
-12099||10|d|G
-12099||10|a|G
-12099||10|x|G
-12099||-9223372036854775808|r|G
-12099||10|r|G
-12099||10|t|G
-12099||10|D|G
-12099||10|w|G
-12104||10|d|G
-12104||10|a|G
-12104||10|x|G
-12104||-9223372036854775808|r|G
-12104||10|r|G
-12104||10|t|G
-12104||10|D|G
-12104||-9223372036854775808|w|G
-12104||10|w|G
-12110||10|d|G
-12110||10|a|G
-12110||10|x|G
-12110||10|r|G
-12110||10|t|G
-12110||10|D|G
-12110||10|w|G
-12114||10|d|G
-12114||10|a|G
-12114||10|x|G
-12114||10|r|G
-12114||10|t|G
-12114||10|D|G
-12114||10|w|G
-12118||10|d|G
-12118||10|a|G
-12118||10|x|G
-12118||10|r|G
-12118||10|t|G
-12118||10|D|G
-12118||10|w|G
-12122||10|d|G
-12122||10|a|G
-12122||10|x|G
-12122||-9223372036854775808|r|G
-12122||10|r|G
-12122||10|t|G
-12122||10|D|G
-12122||10|w|G
-12126||10|d|G
-12126||10|a|G
-12126||10|x|G
-12126||-9223372036854775808|r|G
-12126||10|r|G
-12126||10|t|G
-12126||10|D|G
-12126||10|w|G
-12130||10|d|G
-12130||10|a|G
-12130||10|x|G
-12130||10|r|G
-12130||10|t|G
-12130||10|D|G
-12130||10|w|G
-12134||10|d|G
-12134||10|a|G
-12134||10|x|G
-12134||10|r|G
-12134||3375|r|G
-12134||10|t|G
-12134||10|D|G
-12134||10|w|G
-12138||10|d|G
-12138||10|a|G
-12138||10|x|G
-12138||10|r|G
-12138||3375|r|G
-12138||10|t|G
-12138||10|D|G
-12138||10|w|G
-12142||10|d|G
-12142||10|a|G
-12142||10|x|G
-12142||-9223372036854775808|r|G
-12142||10|r|G
-12142||10|t|G
-12142||10|D|G
-12142||10|w|G
-12147||10|d|G
-12147||10|a|G
-12147||10|x|G
-12147||-9223372036854775808|r|G
-12147||10|r|G
-12147||10|t|G
-12147||10|D|G
-12147||10|w|G
-12152||10|d|G
-12152||10|a|G
-12152||10|x|G
-12152||-9223372036854775808|r|G
-12152||10|r|G
-12152||10|t|G
-12152||10|D|G
-12152||10|w|G
-12157||10|d|G
-12157||10|a|G
-12157||10|x|G
-12157||-9223372036854775808|r|G
-12157||10|r|G
-12157||10|t|G
-12157||10|D|G
-12157||10|w|G
-12161||10|d|G
-12161||10|a|G
-12161||10|x|G
-12161||-9223372036854775808|r|G
-12161||10|r|G
-12161||10|t|G
-12161||10|D|G
-12161||10|w|G
-12166||10|d|G
-12166||10|a|G
-12166||10|x|G
-12166||-9223372036854775808|r|G
-12166||10|r|G
-12166||10|t|G
-12166||10|D|G
-12166||10|w|G
-12170||10|d|G
-12170||10|a|G
-12170||10|x|G
-12170||-9223372036854775808|r|G
-12170||10|r|G
-12170||10|t|G
-12170||10|D|G
-12170||10|w|G
-12175||10|d|G
-12175||10|a|G
-12175||10|x|G
-12175||-9223372036854775808|r|G
-12175||10|r|G
-12175||10|t|G
-12175||10|D|G
-12175||10|w|G
-12179||10|d|G
-12179||10|a|G
-12179||10|x|G
-12179||-9223372036854775808|r|G
-12179||10|r|G
-12179||10|t|G
-12179||10|D|G
-12179||10|w|G
-12183||10|d|G
-12183||10|a|G
-12183||10|x|G
-12183||-9223372036854775808|r|G
-12183||10|r|G
-12183||10|t|G
-12183||10|D|G
-12183||10|w|G
-12188||10|d|G
-12188||10|a|G
-12188||10|x|G
-12188||-9223372036854775808|r|G
-12188||10|r|G
-12188||10|t|G
-12188||10|D|G
-12188||10|w|G
-12192||10|d|G
-12192||10|a|G
-12192||10|x|G
-12192||-9223372036854775808|r|G
-12192||10|r|G
-12192||10|t|G
-12192||10|D|G
-12192||10|w|G
-12196||10|d|G
-12196||10|a|G
-12196||10|x|G
-12196||-9223372036854775808|r|G
-12196||10|r|G
-12196||10|t|G
-12196||10|D|G
-12196||10|w|G
-12201||10|d|G
-12201||10|a|G
-12201||10|x|G
-12201||-9223372036854775808|r|G
-12201||10|r|G
-12201||10|t|G
-12201||10|D|G
-12201||10|w|G
-12205||10|d|G
-12205||10|a|G
-12205||10|x|G
-12205||-9223372036854775808|r|G
-12205||10|r|G
-12205||10|t|G
-12205||10|D|G
-12205||10|w|G
-12209||10|d|G
-12209||10|a|G
-12209||10|x|G
-12209||-9223372036854775808|r|G
-12209||10|r|G
-12209||10|t|G
-12209||10|D|G
-12209||10|w|G
-12214||10|d|G
-12214||10|a|G
-12214||10|x|G
-12214||-9223372036854775808|r|G
-12214||10|r|G
-12214||10|t|G
-12214||10|D|G
-12214||10|w|G
-12218||10|d|G
-12218||10|a|G
-12218||10|x|G
-12218||-9223372036854775808|r|G
-12218||10|r|G
-12218||10|t|G
-12218||10|D|G
-12218||10|w|G
-12222||10|d|G
-12222||10|a|G
-12222||10|x|G
-12222||-9223372036854775808|r|G
-12222||10|r|G
-12222||10|t|G
-12222||10|D|G
-12222||10|w|G
-12227||10|d|G
-12227||10|a|G
-12227||10|x|G
-12227||-9223372036854775808|r|G
-12227||10|r|G
-12227||10|t|G
-12227||10|D|G
-12227||10|w|G
-12232||10|d|G
-12232||10|a|G
-12232||10|x|G
-12232||-9223372036854775808|r|G
-12232||10|r|G
-12232||10|t|G
-12232||10|D|G
-12232||10|w|G
-12236||10|d|G
-12236||10|a|G
-12236||10|x|G
-12236||-9223372036854775808|r|G
-12236||10|r|G
-12236||10|t|G
-12236||10|D|G
-12236||10|w|G
-12240||10|d|G
-12240||10|a|G
-12240||10|x|G
-12240||-9223372036854775808|r|G
-12240||10|r|G
-12240||10|t|G
-12240||10|D|G
-12240||10|w|G
-12244||10|d|G
-12244||10|a|G
-12244||10|x|G
-12244||-9223372036854775808|r|G
-12244||10|r|G
-12244||10|t|G
-12244||10|D|G
-12244||10|w|G
-12249||10|d|G
-12249||10|a|G
-12249||10|x|G
-12249||-9223372036854775808|r|G
-12249||10|r|G
-12249||10|t|G
-12249||10|D|G
-12249||10|w|G
-12253||10|d|G
-12253||10|a|G
-12253||10|x|G
-12253||-9223372036854775808|r|G
-12253||10|r|G
-12253||10|t|G
-12253||10|D|G
-12253||10|w|G
-12257||10|d|G
-12257||10|a|G
-12257||10|x|G
-12257||-9223372036854775808|r|G
-12257||10|r|G
-12257||10|t|G
-12257||10|D|G
-12257||10|w|G
-12262||10|d|G
-12262||10|a|G
-12262||10|x|G
-12262||-9223372036854775808|r|G
-12262||10|r|G
-12262||10|t|G
-12262||10|D|G
-12262||10|w|G
-12266||10|d|G
-12266||10|a|G
-12266||10|x|G
-12266||-9223372036854775808|r|G
-12266||10|r|G
-12266||10|t|G
-12266||10|D|G
-12266||10|w|G
-12271||10|d|G
-12271||10|a|G
-12271||10|x|G
-12271||-9223372036854775808|r|G
-12271||10|r|G
-12271||10|t|G
-12271||10|D|G
-12271||10|w|G
-12275||10|d|G
-12275||10|a|G
-12275||10|x|G
-12275||-9223372036854775808|r|G
-12275||10|r|G
-12275||10|t|G
-12275||10|D|G
-12275||10|w|G
-12280||10|d|G
-12280||10|a|G
-12280||10|x|G
-12280||-9223372036854775808|r|G
-12280||10|r|G
-12280||10|t|G
-12280||10|D|G
-12280||10|w|G
-12285||10|d|G
-12285||10|a|G
-12285||10|x|G
-12285||-9223372036854775808|r|G
-12285||10|r|G
-12285||10|t|G
-12285||10|D|G
-12285||10|w|G
-12289||10|d|G
-12289||10|a|G
-12289||10|x|G
-12289||-9223372036854775808|r|G
-12289||10|r|G
-12289||10|t|G
-12289||10|D|G
-12289||10|w|G
-12293||10|d|G
-12293||10|a|G
-12293||10|x|G
-12293||-9223372036854775808|r|G
-12293||10|r|G
-12293||10|t|G
-12293||10|D|G
-12293||10|w|G
-12297||10|d|G
-12297||10|a|G
-12297||10|x|G
-12297||-9223372036854775808|r|G
-12297||10|r|G
-12297||10|t|G
-12297||10|D|G
-12297||10|w|G
-12301||10|d|G
-12301||10|a|G
-12301||10|x|G
-12301||-9223372036854775808|r|G
-12301||10|r|G
-12301||10|t|G
-12301||10|D|G
-12301||10|w|G
-12305||10|d|G
-12305||10|a|G
-12305||10|x|G
-12305||-9223372036854775808|r|G
-12305||10|r|G
-12305||10|t|G
-12305||10|D|G
-12305||10|w|G
-12310||10|d|G
-12310||10|a|G
-12310||10|x|G
-12310||-9223372036854775808|r|G
-12310||10|r|G
-12310||10|t|G
-12310||10|D|G
-12310||10|w|G
-12315||10|d|G
-12315||10|a|G
-12315||10|x|G
-12315||-9223372036854775808|r|G
-12315||10|r|G
-12315||10|t|G
-12315||10|D|G
-12315||10|w|G
-12320||10|d|G
-12320||10|a|G
-12320||10|x|G
-12320||-9223372036854775808|r|G
-12320||10|r|G
-12320||10|t|G
-12320||10|D|G
-12320||10|w|G
-12325||10|d|G
-12325||10|a|G
-12325||10|x|G
-12325||-9223372036854775808|r|G
-12325||10|r|G
-12325||10|t|G
-12325||10|D|G
-12325||10|w|G
-12329||10|d|G
-12329||10|a|G
-12329||10|x|G
-12329||-9223372036854775808|r|G
-12329||10|r|G
-12329||10|t|G
-12329||10|D|G
-12329||10|w|G
-12334||10|d|G
-12334||10|a|G
-12334||10|x|G
-12334||-9223372036854775808|r|G
-12334||10|r|G
-12334||10|t|G
-12334||10|D|G
-12334||10|w|G
-12339||10|d|G
-12339||10|a|G
-12339||10|x|G
-12339||10|r|G
-12339||10|t|G
-12339||10|D|G
-12339||10|w|G
-12343||10|d|G
-12343||10|a|G
-12343||10|x|G
-12343||-9223372036854775808|r|G
-12343||10|r|G
-12343||10|t|G
-12343||10|D|G
-12343||10|w|G
-12347||10|d|G
-12347||10|a|G
-12347||10|x|G
-12347||-9223372036854775808|r|G
-12347||10|r|G
-12347||10|t|G
-12347||10|D|G
-12347||10|w|G</Grants>
-      <LastIntrospectionLocalTimestamp>2024-10-08.19:22:22</LastIntrospectionLocalTimestamp>
       <ObjectId>11</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -5480,8 +4268,8 @@ false Zulu
     <schema id="270" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>6670</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-10-09.18:45:38</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>6714</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-09.19:04:05</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -5496,133 +4284,351 @@ false Zulu
       <StateNumber>751</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <schema id="273" parent="3" name="starcompany">
+    <schema id="273" parent="3" name="slaughterhouse">
+      <IntrospectionStateNumber>6711</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-09.19:02:59</LastIntrospectionLocalTimestamp>
+      <ObjectId>34671</ObjectId>
+      <StateNumber>6672</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </schema>
+    <schema id="274" parent="3" name="starcompany">
       <ObjectId>16397</ObjectId>
       <StateNumber>741</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
-    <table id="274" parent="270" name="chats">
+    <table id="275" parent="270" name="animal">
+      <ObjectId>34672</ObjectId>
+      <StateNumber>6698</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="276" parent="270" name="chats">
       <ObjectId>25223</ObjectId>
       <StateNumber>5372</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="275" parent="270" name="city">
+    <table id="277" parent="270" name="city">
       <ObjectId>34526</ObjectId>
       <StateNumber>6620</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="276" parent="270" name="eventregistrations">
+    <table id="278" parent="270" name="eventregistrations">
       <ObjectId>25182</ObjectId>
       <StateNumber>5369</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="277" parent="270" name="events">
+    <table id="279" parent="270" name="events">
       <ObjectId>25175</ObjectId>
       <StateNumber>5369</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="278" parent="270" name="games">
+    <table id="280" parent="270" name="games">
       <ObjectId>25168</ObjectId>
       <StateNumber>5374</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="279" parent="270" name="leaderboards">
+    <table id="281" parent="270" name="leaderboards">
       <ObjectId>25256</ObjectId>
       <StateNumber>5374</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="280" parent="270" name="matches">
+    <table id="282" parent="270" name="matches">
       <ObjectId>25198</ObjectId>
       <StateNumber>5370</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="281" parent="270" name="matchparticipants">
+    <table id="283" parent="270" name="matchparticipants">
       <ObjectId>25208</ObjectId>
       <StateNumber>5371</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="282" parent="270" name="messages">
+    <table id="284" parent="270" name="messages">
       <ObjectId>25238</ObjectId>
       <StateNumber>5373</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="283" parent="270" name="mountain">
+    <table id="285" parent="270" name="mountain">
       <ObjectId>34520</ObjectId>
       <StateNumber>6619</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="284" parent="270" name="race">
+    <table id="286" parent="270" name="part">
+      <ObjectId>34679</ObjectId>
+      <StateNumber>6679</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="287" parent="270" name="product">
+      <ObjectId>34684</ObjectId>
+      <StateNumber>6678</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="288" parent="270" name="productanimal">
+      <ObjectId>34689</ObjectId>
+      <StateNumber>6678</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="289" parent="270" name="productpart">
+      <ObjectId>34704</ObjectId>
+      <StateNumber>6679</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="290" parent="270" name="race">
       <ObjectId>34499</ObjectId>
       <StateNumber>6618</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="285" parent="270" name="rider">
+    <table id="291" parent="270" name="recall">
+      <ObjectId>34719</ObjectId>
+      <StateNumber>6680</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="292" parent="270" name="rider">
       <ObjectId>34487</ObjectId>
       <StateNumber>6616</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="286" parent="270" name="rider_in_race">
+    <table id="293" parent="270" name="rider_in_race">
       <ObjectId>34504</ObjectId>
       <StateNumber>6618</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="287" parent="270" name="roles">
+    <table id="294" parent="270" name="roles">
       <ObjectId>25148</ObjectId>
       <StateNumber>5366</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="288" parent="270" name="team">
+    <table id="295" parent="270" name="team">
       <ObjectId>34481</ObjectId>
       <StateNumber>6616</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="289" parent="270" name="userroles">
+    <table id="296" parent="270" name="tray">
+      <ObjectId>34729</ObjectId>
+      <StateNumber>6681</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="297" parent="270" name="userroles">
       <ObjectId>25153</ObjectId>
       <StateNumber>5366</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="290" parent="270" name="users">
+    <table id="298" parent="270" name="users">
       <ObjectId>25141</ObjectId>
       <StateNumber>5366</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="291" parent="274" name="chatid">
+    <sequence id="299" parent="273" name="animal_id_seq">
+      <ObjectId>34746</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>6700</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="300" parent="273" name="part_id_seq">
+      <ObjectId>34754</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>6704</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="301" parent="273" name="product_id_seq">
+      <ObjectId>34773</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>6706</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="302" parent="273" name="productanimal_id_seq">
+      <ObjectId>34799</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>6708</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="303" parent="273" name="productpart_id_seq">
+      <ObjectId>34785</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>6707</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="304" parent="273" name="recall_id_seq">
+      <ObjectId>34813</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>6709</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="305" parent="273" name="tray_id_seq">
+      <ObjectId>34766</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>6705</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="306" parent="273" name="animal">
+      <ObjectId>34747</ObjectId>
+      <StateNumber>6710</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="307" parent="273" name="part">
+      <ObjectId>34755</ObjectId>
+      <StateNumber>6704</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="308" parent="273" name="product">
+      <ObjectId>34774</ObjectId>
+      <StateNumber>6706</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="309" parent="273" name="productanimal">
+      <ObjectId>34800</ObjectId>
+      <StateNumber>6708</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="310" parent="273" name="productpart">
+      <ObjectId>34786</ObjectId>
+      <StateNumber>6707</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="311" parent="273" name="recall">
+      <ObjectId>34814</ObjectId>
+      <StateNumber>6710</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="312" parent="273" name="tray">
+      <ObjectId>34767</ObjectId>
+      <StateNumber>6706</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="313" parent="275" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6675</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="314" parent="275" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>6675</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="315" parent="275" name="type">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>6675</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="316" parent="275" name="breed">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>6675</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="317" parent="275" name="age">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>6675</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="318" parent="275" name="weight">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>6675</StateNumber>
+      <StoredType>numeric(10,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="319" parent="275" name="recall_id">
+      <Position>7</Position>
+      <StateNumber>6698</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="320" parent="275" name="fk_animal_recall">
+      <ColNames>recall_id</ColNames>
+      <ObjectId>34741</ObjectId>
+      <StateNumber>6698</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34719</RefTableId>
+    </foreign-key>
+    <index id="321" parent="275" name="animal_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34677</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6675</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="322" parent="275" name="animal_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34678</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6675</StateNumber>
+      <UnderlyingIndexId>34677</UnderlyingIndexId>
+    </key>
+    <column id="323" parent="276" name="chatid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5372</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="292" parent="274" name="eventid">
+    <column id="324" parent="276" name="eventid">
       <Position>2</Position>
       <StateNumber>5372</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="293" parent="274" name="matchid">
+    <column id="325" parent="276" name="matchid">
       <Position>3</Position>
       <StateNumber>5372</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="294" parent="274" name="chats_eventid_fkey">
+    <foreign-key id="326" parent="276" name="chats_eventid_fkey">
       <ColNames>eventid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25228</ObjectId>
@@ -5630,7 +4636,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25175</RefTableId>
     </foreign-key>
-    <foreign-key id="295" parent="274" name="chats_matchid_fkey">
+    <foreign-key id="327" parent="276" name="chats_matchid_fkey">
       <ColNames>matchid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25233</ObjectId>
@@ -5638,7 +4644,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25198</RefTableId>
     </foreign-key>
-    <index id="296" parent="274" name="chats_pkey">
+    <index id="328" parent="276" name="chats_pkey">
       <ColNames>chatid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25226</ObjectId>
@@ -5647,21 +4653,21 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="297" parent="274" name="chats_pkey">
+    <key id="329" parent="276" name="chats_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25227</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5372</StateNumber>
       <UnderlyingIndexId>25226</UnderlyingIndexId>
     </key>
-    <column id="298" parent="275" name="city_name">
+    <column id="330" parent="277" name="city_name">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>6620</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="299" parent="275" name="city_pkey">
+    <index id="331" parent="277" name="city_pkey">
       <ColNames>city_name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34529</ObjectId>
@@ -5673,46 +4679,46 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="300" parent="275" name="city_pkey">
+    <key id="332" parent="277" name="city_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34530</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6620</StateNumber>
       <UnderlyingIndexId>34529</UnderlyingIndexId>
     </key>
-    <column id="301" parent="276" name="registrationid">
+    <column id="333" parent="278" name="registrationid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5369</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="302" parent="276" name="eventid">
+    <column id="334" parent="278" name="eventid">
       <Position>2</Position>
       <StateNumber>5369</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="303" parent="276" name="userid">
+    <column id="335" parent="278" name="userid">
       <Position>3</Position>
       <StateNumber>5369</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="304" parent="276" name="checkinstatus">
+    <column id="336" parent="278" name="checkinstatus">
       <Position>4</Position>
       <StateNumber>5369</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <column id="305" parent="276" name="registrationtimestamp">
+    <column id="337" parent="278" name="registrationtimestamp">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>5</Position>
       <StateNumber>5369</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="306" parent="276" name="eventregistrations_eventid_fkey">
+    <foreign-key id="338" parent="278" name="eventregistrations_eventid_fkey">
       <ColNames>eventid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25188</ObjectId>
@@ -5720,7 +4726,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25175</RefTableId>
     </foreign-key>
-    <foreign-key id="307" parent="276" name="eventregistrations_userid_fkey">
+    <foreign-key id="339" parent="278" name="eventregistrations_userid_fkey">
       <ColNames>userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25193</ObjectId>
@@ -5728,7 +4734,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25141</RefTableId>
     </foreign-key>
-    <index id="308" parent="276" name="eventregistrations_pkey">
+    <index id="340" parent="278" name="eventregistrations_pkey">
       <ColNames>registrationid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25186</ObjectId>
@@ -5737,63 +4743,63 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="309" parent="276" name="eventregistrations_pkey">
+    <key id="341" parent="278" name="eventregistrations_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25187</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5369</StateNumber>
       <UnderlyingIndexId>25186</UnderlyingIndexId>
     </key>
-    <column id="310" parent="277" name="eventid">
+    <column id="342" parent="279" name="eventid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="311" parent="277" name="name">
+    <column id="343" parent="279" name="name">
       <Position>2</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="312" parent="277" name="startdate">
+    <column id="344" parent="279" name="startdate">
       <Position>3</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
-    <column id="313" parent="277" name="enddate">
+    <column id="345" parent="279" name="enddate">
       <Position>4</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
-    <column id="314" parent="277" name="minbrp">
+    <column id="346" parent="279" name="minbrp">
       <Position>5</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="315" parent="277" name="maxbrp">
+    <column id="347" parent="279" name="maxbrp">
       <Position>6</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="316" parent="277" name="maxparticipants">
+    <column id="348" parent="279" name="maxparticipants">
       <Position>7</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="317" parent="277" name="status">
+    <column id="349" parent="279" name="status">
       <Position>8</Position>
       <StateNumber>5368</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="318" parent="277" name="events_pkey">
+    <index id="350" parent="279" name="events_pkey">
       <ColNames>eventid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25180</ObjectId>
@@ -5802,33 +4808,33 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="319" parent="277" name="events_pkey">
+    <key id="351" parent="279" name="events_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25181</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5368</StateNumber>
       <UnderlyingIndexId>25180</UnderlyingIndexId>
     </key>
-    <column id="320" parent="278" name="gameid">
+    <column id="352" parent="280" name="gameid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5367</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="321" parent="278" name="name">
+    <column id="353" parent="280" name="name">
       <Position>2</Position>
       <StateNumber>5367</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="322" parent="278" name="description">
+    <column id="354" parent="280" name="description">
       <Position>3</Position>
       <StateNumber>5367</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <index id="323" parent="278" name="games_pkey">
+    <index id="355" parent="280" name="games_pkey">
       <ColNames>gameid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25173</ObjectId>
@@ -5837,39 +4843,39 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="324" parent="278" name="games_pkey">
+    <key id="356" parent="280" name="games_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25174</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5367</StateNumber>
       <UnderlyingIndexId>25173</UnderlyingIndexId>
     </key>
-    <column id="325" parent="279" name="leaderboardid">
+    <column id="357" parent="281" name="leaderboardid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5374</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="326" parent="279" name="gameid">
+    <column id="358" parent="281" name="gameid">
       <Position>2</Position>
       <StateNumber>5374</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="327" parent="279" name="userid">
+    <column id="359" parent="281" name="userid">
       <Position>3</Position>
       <StateNumber>5374</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="328" parent="279" name="playerrank">
+    <column id="360" parent="281" name="playerrank">
       <Position>4</Position>
       <StateNumber>5374</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="329" parent="279" name="leaderboards_gameid_fkey">
+    <foreign-key id="361" parent="281" name="leaderboards_gameid_fkey">
       <ColNames>gameid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25261</ObjectId>
@@ -5877,7 +4883,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25168</RefTableId>
     </foreign-key>
-    <foreign-key id="330" parent="279" name="leaderboards_userid_fkey">
+    <foreign-key id="362" parent="281" name="leaderboards_userid_fkey">
       <ColNames>userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25266</ObjectId>
@@ -5885,7 +4891,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25141</RefTableId>
     </foreign-key>
-    <index id="331" parent="279" name="leaderboards_pkey">
+    <index id="363" parent="281" name="leaderboards_pkey">
       <ColNames>leaderboardid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25259</ObjectId>
@@ -5894,33 +4900,33 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="332" parent="279" name="leaderboards_pkey">
+    <key id="364" parent="281" name="leaderboards_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25260</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5374</StateNumber>
       <UnderlyingIndexId>25259</UnderlyingIndexId>
     </key>
-    <column id="333" parent="280" name="matchid">
+    <column id="365" parent="282" name="matchid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5370</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="334" parent="280" name="eventid">
+    <column id="366" parent="282" name="eventid">
       <Position>2</Position>
       <StateNumber>5370</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="335" parent="280" name="status">
+    <column id="367" parent="282" name="status">
       <Position>3</Position>
       <StateNumber>5370</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="336" parent="280" name="matches_eventid_fkey">
+    <foreign-key id="368" parent="282" name="matches_eventid_fkey">
       <ColNames>eventid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25203</ObjectId>
@@ -5928,7 +4934,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25175</RefTableId>
     </foreign-key>
-    <index id="337" parent="280" name="matches_pkey">
+    <index id="369" parent="282" name="matches_pkey">
       <ColNames>matchid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25201</ObjectId>
@@ -5937,34 +4943,34 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="338" parent="280" name="matches_pkey">
+    <key id="370" parent="282" name="matches_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25202</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5370</StateNumber>
       <UnderlyingIndexId>25201</UnderlyingIndexId>
     </key>
-    <column id="339" parent="281" name="matchid">
+    <column id="371" parent="283" name="matchid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5371</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="340" parent="281" name="userid">
+    <column id="372" parent="283" name="userid">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>5371</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="341" parent="281" name="participantstatus">
+    <column id="373" parent="283" name="participantstatus">
       <Position>3</Position>
       <StateNumber>5371</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="342" parent="281" name="matchparticipants_matchid_fkey">
+    <foreign-key id="374" parent="283" name="matchparticipants_matchid_fkey">
       <ColNames>matchid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25213</ObjectId>
@@ -5972,7 +4978,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25198</RefTableId>
     </foreign-key>
-    <foreign-key id="343" parent="281" name="matchparticipants_userid_fkey">
+    <foreign-key id="375" parent="283" name="matchparticipants_userid_fkey">
       <ColNames>userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25218</ObjectId>
@@ -5980,7 +4986,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25141</RefTableId>
     </foreign-key>
-    <index id="344" parent="281" name="matchparticipants_pkey">
+    <index id="376" parent="283" name="matchparticipants_pkey">
       <ColNames>matchid
 userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -5990,46 +4996,46 @@ userid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="345" parent="281" name="matchparticipants_pkey">
+    <key id="377" parent="283" name="matchparticipants_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25212</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5371</StateNumber>
       <UnderlyingIndexId>25211</UnderlyingIndexId>
     </key>
-    <column id="346" parent="282" name="messageid">
+    <column id="378" parent="284" name="messageid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5373</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="347" parent="282" name="chatid">
+    <column id="379" parent="284" name="chatid">
       <Position>2</Position>
       <StateNumber>5373</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="348" parent="282" name="userid">
+    <column id="380" parent="284" name="userid">
       <Position>3</Position>
       <StateNumber>5373</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="349" parent="282" name="content">
+    <column id="381" parent="284" name="content">
       <Position>4</Position>
       <StateNumber>5373</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="350" parent="282" name="timestamp">
+    <column id="382" parent="284" name="timestamp">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>5</Position>
       <StateNumber>5373</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="351" parent="282" name="messages_chatid_fkey">
+    <foreign-key id="383" parent="284" name="messages_chatid_fkey">
       <ColNames>chatid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25246</ObjectId>
@@ -6037,7 +5043,7 @@ userid</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25223</RefTableId>
     </foreign-key>
-    <foreign-key id="352" parent="282" name="messages_userid_fkey">
+    <foreign-key id="384" parent="284" name="messages_userid_fkey">
       <ColNames>userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25251</ObjectId>
@@ -6045,7 +5051,7 @@ userid</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25141</RefTableId>
     </foreign-key>
-    <index id="353" parent="282" name="messages_pkey">
+    <index id="385" parent="284" name="messages_pkey">
       <ColNames>messageid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25244</ObjectId>
@@ -6054,39 +5060,39 @@ userid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="354" parent="282" name="messages_pkey">
+    <key id="386" parent="284" name="messages_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25245</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5373</StateNumber>
       <UnderlyingIndexId>25244</UnderlyingIndexId>
     </key>
-    <check id="355" parent="283" name="chk_category">
+    <check id="387" parent="285" name="chk_category">
       <ColNames>category</ColNames>
       <ObjectId>34523</ObjectId>
       <Predicate>(category)::text = ANY ((ARRAY[&apos;1&apos;::character varying, &apos;2&apos;::character varying, &apos;3&apos;::character varying, &apos;4&apos;::character varying, &apos;HC&apos;::character varying])::text[])</Predicate>
       <StateNumber>6619</StateNumber>
     </check>
-    <column id="356" parent="283" name="mountain_name">
+    <column id="388" parent="285" name="mountain_name">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>6619</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="357" parent="283" name="height">
+    <column id="389" parent="285" name="height">
       <Position>2</Position>
       <StateNumber>6619</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="358" parent="283" name="category">
+    <column id="390" parent="285" name="category">
       <Position>3</Position>
       <StateNumber>6619</StateNumber>
       <StoredType>varchar(2)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="359" parent="283" name="mountain_pkey">
+    <index id="391" parent="285" name="mountain_pkey">
       <ColNames>mountain_name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34524</ObjectId>
@@ -6098,28 +5104,208 @@ userid</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="360" parent="283" name="mountain_pkey">
+    <key id="392" parent="285" name="mountain_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34525</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6619</StateNumber>
       <UnderlyingIndexId>34524</UnderlyingIndexId>
     </key>
-    <column id="361" parent="284" name="race_name">
+    <column id="393" parent="286" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6676</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="394" parent="286" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>6676</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="395" parent="286" name="price">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>6676</StateNumber>
+      <StoredType>numeric(10,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="396" parent="286" name="part_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34682</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6676</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="397" parent="286" name="part_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34683</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6676</StateNumber>
+      <UnderlyingIndexId>34682</UnderlyingIndexId>
+    </key>
+    <column id="398" parent="287" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6677</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="399" parent="287" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>6677</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="400" parent="287" name="price">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>6677</StateNumber>
+      <StoredType>numeric(10,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="401" parent="287" name="product_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34687</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6677</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="402" parent="287" name="product_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34688</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6677</StateNumber>
+      <UnderlyingIndexId>34687</UnderlyingIndexId>
+    </key>
+    <column id="403" parent="288" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6678</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="404" parent="288" name="product_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>6678</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="405" parent="288" name="animal_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>6678</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="406" parent="288" name="productanimal_product_id_fkey">
+      <ColNames>product_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34694</ObjectId>
+      <StateNumber>6678</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34684</RefTableId>
+    </foreign-key>
+    <foreign-key id="407" parent="288" name="productanimal_animal_id_fkey">
+      <ColNames>animal_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34699</ObjectId>
+      <StateNumber>6678</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34672</RefTableId>
+    </foreign-key>
+    <index id="408" parent="288" name="productanimal_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34692</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6678</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="409" parent="288" name="productanimal_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34693</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6678</StateNumber>
+      <UnderlyingIndexId>34692</UnderlyingIndexId>
+    </key>
+    <column id="410" parent="289" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6679</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="411" parent="289" name="product_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>6679</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="412" parent="289" name="part_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>6679</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="413" parent="289" name="productpart_product_id_fkey">
+      <ColNames>product_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34709</ObjectId>
+      <StateNumber>6679</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34684</RefTableId>
+    </foreign-key>
+    <foreign-key id="414" parent="289" name="productpart_part_id_fkey">
+      <ColNames>part_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34714</ObjectId>
+      <StateNumber>6679</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34679</RefTableId>
+    </foreign-key>
+    <index id="415" parent="289" name="productpart_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34707</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6679</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="416" parent="289" name="productpart_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34708</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6679</StateNumber>
+      <UnderlyingIndexId>34707</UnderlyingIndexId>
+    </key>
+    <column id="417" parent="290" name="race_name">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>6617</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="362" parent="284" name="race_year">
+    <column id="418" parent="290" name="race_year">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>6617</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <index id="363" parent="284" name="race_pkey">
+    <index id="419" parent="290" name="race_pkey">
       <ColNames>race_name
 race_year</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -6132,33 +5318,85 @@ race_year</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="364" parent="284" name="race_pkey">
+    <key id="420" parent="290" name="race_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34503</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6617</StateNumber>
       <UnderlyingIndexId>34502</UnderlyingIndexId>
     </key>
-    <column id="365" parent="285" name="rider_id">
+    <column id="421" parent="291" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6680</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="422" parent="291" name="product_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>6680</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="423" parent="291" name="recall_date">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>6680</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="424" parent="291" name="description">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>6680</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="425" parent="291" name="recall_product_id_fkey">
+      <ColNames>product_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34724</ObjectId>
+      <StateNumber>6680</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34684</RefTableId>
+    </foreign-key>
+    <index id="426" parent="291" name="recall_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34722</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6680</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="427" parent="291" name="recall_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34723</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6680</StateNumber>
+      <UnderlyingIndexId>34722</UnderlyingIndexId>
+    </key>
+    <column id="428" parent="292" name="rider_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>6616</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="366" parent="285" name="rider_name">
+    <column id="429" parent="292" name="rider_name">
       <Position>2</Position>
       <StateNumber>6616</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="367" parent="285" name="team_name">
+    <column id="430" parent="292" name="team_name">
       <Position>3</Position>
       <StateNumber>6616</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="368" parent="285" name="rider_team_name_fkey">
+    <foreign-key id="431" parent="292" name="rider_team_name_fkey">
       <ColNames>team_name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34494</ObjectId>
@@ -6166,7 +5404,7 @@ race_year</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>34481</RefTableId>
     </foreign-key>
-    <index id="369" parent="285" name="rider_pkey">
+    <index id="432" parent="292" name="rider_pkey">
       <ColNames>rider_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34492</ObjectId>
@@ -6175,47 +5413,47 @@ race_year</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="370" parent="285" name="rider_pkey">
+    <key id="433" parent="292" name="rider_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34493</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6616</StateNumber>
       <UnderlyingIndexId>34492</UnderlyingIndexId>
     </key>
-    <check id="371" parent="286" name="chk_rider_race_number">
+    <check id="434" parent="293" name="chk_rider_race_number">
       <ColNames>rider_race_number</ColNames>
       <ObjectId>34507</ObjectId>
       <Predicate>(rider_race_number &gt;= 1) AND (rider_race_number &lt;= 300)</Predicate>
       <StateNumber>6618</StateNumber>
     </check>
-    <column id="372" parent="286" name="rider_id">
+    <column id="435" parent="293" name="rider_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>6618</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="373" parent="286" name="race_name">
+    <column id="436" parent="293" name="race_name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>6618</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="374" parent="286" name="race_year">
+    <column id="437" parent="293" name="race_year">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>6618</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="375" parent="286" name="rider_race_number">
+    <column id="438" parent="293" name="rider_race_number">
       <Position>4</Position>
       <StateNumber>6618</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="376" parent="286" name="rider_in_race_rider_id_fkey">
+    <foreign-key id="439" parent="293" name="rider_in_race_rider_id_fkey">
       <ColNames>rider_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34510</ObjectId>
@@ -6223,7 +5461,7 @@ race_year</ColNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>34487</RefTableId>
     </foreign-key>
-    <foreign-key id="377" parent="286" name="rider_in_race_race_name_race_year_fkey">
+    <foreign-key id="440" parent="293" name="rider_in_race_race_name_race_year_fkey">
       <ColNames>race_name
 race_year</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -6232,7 +5470,7 @@ race_year</ColNames>
       <RefKeyColPositions>1,2</RefKeyColPositions>
       <RefTableId>34499</RefTableId>
     </foreign-key>
-    <index id="378" parent="286" name="rider_in_race_pkey">
+    <index id="441" parent="293" name="rider_in_race_pkey">
       <ColNames>rider_id
 race_name
 race_year</ColNames>
@@ -6249,27 +5487,27 @@ pg_catalog</CollationParentNames>
       <CollationNames>
 default</CollationNames>
     </index>
-    <key id="379" parent="286" name="rider_in_race_pkey">
+    <key id="442" parent="293" name="rider_in_race_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34509</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6618</StateNumber>
       <UnderlyingIndexId>34508</UnderlyingIndexId>
     </key>
-    <column id="380" parent="287" name="roleid">
+    <column id="443" parent="294" name="roleid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5365</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="381" parent="287" name="rolename">
+    <column id="444" parent="294" name="rolename">
       <Position>2</Position>
       <StateNumber>5365</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="382" parent="287" name="roles_pkey">
+    <index id="445" parent="294" name="roles_pkey">
       <ColNames>roleid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25151</ObjectId>
@@ -6278,21 +5516,21 @@ default</CollationNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="383" parent="287" name="roles_pkey">
+    <key id="446" parent="294" name="roles_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25152</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5365</StateNumber>
       <UnderlyingIndexId>25151</UnderlyingIndexId>
     </key>
-    <column id="384" parent="288" name="team_name">
+    <column id="447" parent="295" name="team_name">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>6611</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="385" parent="288" name="team_pkey">
+    <index id="448" parent="295" name="team_pkey">
       <ColNames>team_name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34484</ObjectId>
@@ -6304,28 +5542,65 @@ default</CollationNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="386" parent="288" name="team_pkey">
+    <key id="449" parent="295" name="team_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>34485</ObjectId>
       <Primary>1</Primary>
       <StateNumber>6611</StateNumber>
       <UnderlyingIndexId>34484</UnderlyingIndexId>
     </key>
-    <column id="387" parent="289" name="userid">
+    <column id="450" parent="296" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6681</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="451" parent="296" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>6681</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="452" parent="296" name="weight_limit">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>6681</StateNumber>
+      <StoredType>numeric(10,2 digit)|0s</StoredType>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="453" parent="296" name="tray_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34732</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6681</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="454" parent="296" name="tray_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34733</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6681</StateNumber>
+      <UnderlyingIndexId>34732</UnderlyingIndexId>
+    </key>
+    <column id="455" parent="297" name="userid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5366</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="388" parent="289" name="roleid">
+    <column id="456" parent="297" name="roleid">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>5366</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="389" parent="289" name="userroles_userid_fkey">
+    <foreign-key id="457" parent="297" name="userroles_userid_fkey">
       <ColNames>userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25158</ObjectId>
@@ -6333,7 +5608,7 @@ default</CollationNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25141</RefTableId>
     </foreign-key>
-    <foreign-key id="390" parent="289" name="userroles_roleid_fkey">
+    <foreign-key id="458" parent="297" name="userroles_roleid_fkey">
       <ColNames>roleid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25163</ObjectId>
@@ -6341,7 +5616,7 @@ default</CollationNames>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>25148</RefTableId>
     </foreign-key>
-    <index id="391" parent="289" name="userroles_pkey">
+    <index id="459" parent="297" name="userroles_pkey">
       <ColNames>userid
 roleid</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -6351,33 +5626,33 @@ roleid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="392" parent="289" name="userroles_pkey">
+    <key id="460" parent="297" name="userroles_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25157</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5366</StateNumber>
       <UnderlyingIndexId>25156</UnderlyingIndexId>
     </key>
-    <column id="393" parent="290" name="userid">
+    <column id="461" parent="298" name="userid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>5364</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="394" parent="290" name="username">
+    <column id="462" parent="298" name="username">
       <Position>2</Position>
       <StateNumber>5364</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="395" parent="290" name="password">
+    <column id="463" parent="298" name="password">
       <Position>3</Position>
       <StateNumber>5364</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="396" parent="290" name="users_pkey">
+    <index id="464" parent="298" name="users_pkey">
       <ColNames>userid</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25146</ObjectId>
@@ -6386,12 +5661,370 @@ roleid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="397" parent="290" name="users_pkey">
+    <key id="465" parent="298" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>25147</ObjectId>
       <Primary>1</Primary>
       <StateNumber>5364</StateNumber>
       <UnderlyingIndexId>25146</UnderlyingIndexId>
+    </key>
+    <column id="466" parent="306" name="id">
+      <DefaultExpression>nextval(&apos;slaughterhouse.animal_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6700</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>34746</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="467" parent="306" name="species">
+      <Position>2</Position>
+      <StateNumber>6700</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="468" parent="306" name="weight">
+      <Position>3</Position>
+      <StateNumber>6700</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="469" parent="306" name="arrivaldate">
+      <Position>4</Position>
+      <StateNumber>6700</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="470" parent="306" name="recall_id">
+      <Position>5</Position>
+      <StateNumber>6710</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="471" parent="306" name="fk_animal_recall">
+      <ColNames>recall_id</ColNames>
+      <ObjectId>34820</ObjectId>
+      <StateNumber>6710</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34814</RefTableId>
+    </foreign-key>
+    <index id="472" parent="306" name="animal_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34751</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6700</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="473" parent="306" name="animal_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34752</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6700</StateNumber>
+      <UnderlyingIndexId>34751</UnderlyingIndexId>
+    </key>
+    <column id="474" parent="307" name="id">
+      <DefaultExpression>nextval(&apos;slaughterhouse.part_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6704</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>34754</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="475" parent="307" name="type">
+      <Position>2</Position>
+      <StateNumber>6704</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="476" parent="307" name="weight">
+      <Position>3</Position>
+      <StateNumber>6704</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="477" parent="307" name="animal_id">
+      <Position>4</Position>
+      <StateNumber>6704</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="478" parent="307" name="part_animal_id_fkey">
+      <ColNames>animal_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34761</ObjectId>
+      <StateNumber>6704</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34747</RefTableId>
+    </foreign-key>
+    <index id="479" parent="307" name="part_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34759</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6704</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="480" parent="307" name="part_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34760</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6704</StateNumber>
+      <UnderlyingIndexId>34759</UnderlyingIndexId>
+    </key>
+    <column id="481" parent="308" name="id">
+      <DefaultExpression>nextval(&apos;slaughterhouse.product_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6706</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>34773</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="482" parent="308" name="type">
+      <Position>2</Position>
+      <StateNumber>6706</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="483" parent="308" name="tray_ids">
+      <Position>3</Position>
+      <StateNumber>6706</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="484" parent="308" name="product_tray_ids_fkey">
+      <ColNames>tray_ids</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34780</ObjectId>
+      <StateNumber>6706</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34767</RefTableId>
+    </foreign-key>
+    <index id="485" parent="308" name="product_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34778</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6706</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="486" parent="308" name="product_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34779</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6706</StateNumber>
+      <UnderlyingIndexId>34778</UnderlyingIndexId>
+    </key>
+    <column id="487" parent="309" name="id">
+      <DefaultExpression>nextval(&apos;slaughterhouse.productanimal_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6708</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>34799</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="488" parent="309" name="type">
+      <Position>2</Position>
+      <StateNumber>6708</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="489" parent="309" name="tray_ids">
+      <Position>3</Position>
+      <StateNumber>6708</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="490" parent="309" name="species">
+      <Position>4</Position>
+      <StateNumber>6708</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="491" parent="309" name="slaughterdate">
+      <Position>5</Position>
+      <StateNumber>6708</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="492" parent="309" name="condition">
+      <Position>6</Position>
+      <StateNumber>6708</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="493" parent="309" name="productanimal_tray_ids_fkey">
+      <ColNames>tray_ids</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34808</ObjectId>
+      <StateNumber>6708</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34767</RefTableId>
+    </foreign-key>
+    <index id="494" parent="309" name="productanimal_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34806</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6708</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="495" parent="309" name="productanimal_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34807</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6708</StateNumber>
+      <UnderlyingIndexId>34806</UnderlyingIndexId>
+    </key>
+    <column id="496" parent="310" name="id">
+      <DefaultExpression>nextval(&apos;slaughterhouse.productpart_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6707</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>34785</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="497" parent="310" name="type">
+      <Position>2</Position>
+      <StateNumber>6707</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="498" parent="310" name="max_weight">
+      <Position>3</Position>
+      <StateNumber>6707</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="499" parent="310" name="tray_ids">
+      <Position>4</Position>
+      <StateNumber>6707</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="500" parent="310" name="productiondate">
+      <Position>5</Position>
+      <StateNumber>6707</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="501" parent="310" name="status">
+      <Position>6</Position>
+      <StateNumber>6707</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="502" parent="310" name="productpart_tray_ids_fkey">
+      <ColNames>tray_ids</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34794</ObjectId>
+      <StateNumber>6707</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>34767</RefTableId>
+    </foreign-key>
+    <index id="503" parent="310" name="productpart_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34792</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6707</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="504" parent="310" name="productpart_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34793</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6707</StateNumber>
+      <UnderlyingIndexId>34792</UnderlyingIndexId>
+    </key>
+    <column id="505" parent="311" name="id">
+      <DefaultExpression>nextval(&apos;slaughterhouse.recall_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6709</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>34813</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="506" parent="311" name="reason">
+      <Position>2</Position>
+      <StateNumber>6709</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="507" parent="311" name="dateinitiated">
+      <Position>3</Position>
+      <StateNumber>6709</StateNumber>
+      <StoredType>date|0s</StoredType>
+      <TypeId>1082</TypeId>
+    </column>
+    <index id="508" parent="311" name="recall_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34818</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6709</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="509" parent="311" name="recall_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34819</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6709</StateNumber>
+      <UnderlyingIndexId>34818</UnderlyingIndexId>
+    </key>
+    <column id="510" parent="312" name="id">
+      <DefaultExpression>nextval(&apos;slaughterhouse.tray_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>6705</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>34766</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="511" parent="312" name="type_of_part">
+      <Position>2</Position>
+      <StateNumber>6705</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="512" parent="312" name="max_weight">
+      <Position>3</Position>
+      <StateNumber>6705</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="513" parent="312" name="current_weight">
+      <Position>4</Position>
+      <StateNumber>6705</StateNumber>
+      <StoredType>double precision|0s</StoredType>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="514" parent="312" name="tray_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34771</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6705</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="515" parent="312" name="tray_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>34772</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>6705</StateNumber>
+      <UnderlyingIndexId>34771</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

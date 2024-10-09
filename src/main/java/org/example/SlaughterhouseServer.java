@@ -26,7 +26,7 @@ public class SlaughterhouseServer
   private static Connection connect() throws SQLException {
     String url = "jdbc:postgresql://localhost:5432/postgres";
     String user = "postgres";
-    String password = "451311";
+    String password = "451311qq";
     return DriverManager.getConnection(url, user, password);
   }
   private static final Map<Integer, Animal> animals = new HashMap<>();
@@ -74,6 +74,7 @@ public class SlaughterhouseServer
           int id = resultSet.getInt("id");
           String species = resultSet.getString("species");
           double weight = resultSet.getDouble("weight");
+
           animals.put(id, Animal.newBuilder().setId(id).setSpecies(species)
              .setWeight(weight).build());
 
@@ -91,10 +92,30 @@ public class SlaughterhouseServer
     // Adding sample shit
     animals.put(1,
         Animal.newBuilder().setId(1).setRegistrationNumber("ANIMAL001")
-            .setSpecies("Cow").setWeight(500).build());
+            .setSpecies(":Cow").setWeight(500).build());
     animals.put(2,
         Animal.newBuilder().setId(2).setRegistrationNumber("ANIMAL002")
-            .setSpecies("Pig").setWeight(250).build());
+            .setSpecies(":Pig").setWeight(250).build());
+    animals.put(3,
+            Animal.newBuilder().setId(3).setRegistrationNumber("ANIMAL003")
+            .setSpecies(":Sheep").setWeight(300).build());
+    animals.put(4,
+            Animal.newBuilder().setId(4).setRegistrationNumber("ANIMAL004")
+           .setSpecies(":Goat").setWeight(400).build());
+    animals.put(5,
+            Animal.newBuilder().setId(5).setRegistrationNumber("ANIMAL005")
+           .setSpecies(":Chicken").setWeight(20).build());
+    animals.put(6,
+            Animal.newBuilder().setId(6).setRegistrationNumber("ANIMAL006")
+           .setSpecies(":Deer").setWeight(70).build());
+    animals.put(7,
+            Animal.newBuilder().setId(7).setRegistrationNumber("ANIMAL007")
+           .setSpecies(":Rabbit").setWeight(10).build());
+    animals.put(8,
+            Animal.newBuilder().setId(8).setRegistrationNumber("ANIMAL008")
+           .setSpecies(":Duck").setWeight(15).build());
+
+
 
     // Adding sample products (associated with animals)
     products.put(1, Product.newBuilder().setId(1).addAnimalIds(1).build());
