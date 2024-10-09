@@ -29,8 +29,8 @@ public class SlaughterhouseServer
     String password = "451311";
     return DriverManager.getConnection(url, user, password);
   }
-  private static Map<Integer, Animal> animals = new HashMap<>();
-  private static Map<Integer, Product> products = new HashMap<>();
+  private static final Map<Integer, Animal> animals = new HashMap<>();
+  private static  final Map<Integer, Product> products = new HashMap<>();
 
   public static void main(String[] args)
           throws IOException, InterruptedException, SQLException {
