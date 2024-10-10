@@ -42,7 +42,7 @@ public class SlaughterhouseServer
     // Start the server
     server.start();
     System.out.println("Server started please wait:");
-    sleep(1000);
+    sleep(3000);
     System.out.println("Welcome to the Slaughterhouse! ");
     sleep(1000);
     System.out.println("To view current animal livestock, press C to continue:");
