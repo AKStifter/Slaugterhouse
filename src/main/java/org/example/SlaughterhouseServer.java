@@ -37,8 +37,8 @@ public class SlaughterhouseServer {
     return DriverManager.getConnection(url, user, password);
   }
 
-  private static final Map<Integer, Animal> animals = new HashMap<>();
-  private static final Map<Integer, Product> products = new HashMap<>();
+  public static final Map<Integer, Animal> animals = new HashMap<>();
+  public static final Map<Integer, Product> products = new HashMap<>();
 
   public static void main(String[] args)
           throws IOException, InterruptedException, SQLException {
@@ -71,7 +71,7 @@ public class SlaughterhouseServer {
     server.awaitTermination();
   }
 
-  private static void initializeData() throws SQLException, IOException {
+  public static void initializeData() throws SQLException, IOException {
     try (Connection connection = connect()) {
       String animalQuery = "SELECT ID, Species, Weight FROM slaughterhouse.animal";
       try {
@@ -106,7 +106,7 @@ public class SlaughterhouseServer {
     products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
   }
 
-  static class SlaughterhouseServiceImpl extends SlaughterhouseServiceGrpc.SlaughterhouseServiceImplBase {
+  public static class SlaughterhouseServiceImpl extends SlaughterhouseServiceGrpc.SlaughterhouseServiceImplBase {
 
     @Override
     public void getAnimalInfo(Product request, StreamObserver<Animal> responseObserver) {
