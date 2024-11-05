@@ -8,11 +8,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import io.grpc.stub.StreamObserver;
 import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
-import com.example.grpc.SlaughterhouseServiceGrpc;
 import org.example.Controller.SlaughterhouseServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,13 +21,17 @@ import java.util.Scanner;
 
 import static java.lang.Thread.sleep;
 
-public abstract class SlaughterhouseServer {
+@Component
+public class SlaughterhouseServer implements CommandLineRunner {
+
+    @Autowired
+    private SlaughterhouseServiceImpl slaughterhouseService;
 
     private static Connection connect() throws SQLException, IOException {
         Properties props = new Properties();
-        try (InputStream input = SlaughterhouseServer.class.getClassLoader().getResourceAsStream("config.properties")) {
+        try (InputStream input = SlaughterhouseServer.class.getClassLoader().getResourceAsStream("application.properties")) {
             if (input == null) {
-                throw new IOException("Unable to find config.properties");
+                throw new IOException("Unable to find application.properties");
             }
             props.load(input);
         }
@@ -40,36 +45,6 @@ public abstract class SlaughterhouseServer {
 
     public static final Map<Integer, Animal> animals = new HashMap<>();
     public static final Map<Integer, Product> products = new HashMap<>();
-
-    public static void main(String[] args)
-            throws IOException, InterruptedException, SQLException {
-
-        initializeData();
-
-        Server server = ServerBuilder.forPort(50051).addService(new SlaughterhouseServiceImpl())  // implementation for the services
-                .build();
-
-        // Start the server
-        server.start();
-        System.out.println("Server started please wait:");
-        sleep(3000);
-        System.out.println("Welcome to the Slaughterhouse! ");
-        sleep(1000);
-        System.out.println("To view current animal livestock, press C to continue:");
-        Scanner scanner = new Scanner(System.in);
-        if (scanner.nextLine().equalsIgnoreCase("C")) {
-            for (Animal animal : animals.values())
-                System.out.println("Loaded Animal: ID=" + animal.getId() + ", Species=" + animal.getSpecies() + ", Weight=" + animal.getWeight());
-        }
-
-        // Stop the server
-        server.shutdownNow();
-        if (scanner.nextLine().equalsIgnoreCase("exit"))
-            System.out.println("Shutting down the server...");
-
-        // Await termination
-        server.awaitTermination();
-    }
 
     public static void initializeData() throws SQLException, IOException {
         try (Connection connection = connect()) {
@@ -106,9 +81,39 @@ public abstract class SlaughterhouseServer {
         products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
     }
 
-    public abstract void getAnimalInfo(Product request, StreamObserver<Animal> responseObserver);
+    @Override
+    public void run(String... args) throws Exception {
+        initializeData();
 
-    public abstract void getProductInfo(Animal request, StreamObserver<Product> responseObserver);
+        Server server = ServerBuilder.forPort(50051)
+                .addService(slaughterhouseService)
+                .build();
+
+        // Start the server
+        server.start();
+        System.out.println("Server started please wait:");
+        sleep(3000);
+        System.out.println("Welcome to the Slaughterhouse! ");
+        sleep(1000);
+        System.out.println("To view current animal livestock, press C to continue:");
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.nextLine().equalsIgnoreCase("C")) {
+            for (Animal animal : animals.values())
+                System.out.println("Loaded Animal: ID=" + animal.getId() + ", Species=" + animal.getSpecies() + ", Weight=" + animal.getWeight());
+        }
+
+        //  type 'exit' to stop the server
+        while (!scanner.nextLine().equalsIgnoreCase("exit")) {
+            System.out.println("Type 'exit' to shut down the server.");
+        }
+
+        // Stop the server
+        System.out.println("Shutting down the server...");
+        server.shutdownNow();
+
+        // Await termination
+        server.awaitTermination();
+    }
 
 
 }
