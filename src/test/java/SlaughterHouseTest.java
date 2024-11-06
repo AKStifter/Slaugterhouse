@@ -16,8 +16,9 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SlaughterHouseTest {
 
     @BeforeEach
-    public void setUp() throws SQLException, IOException {
-        SlaughterhouseServer.initializeData();
+    public void setUp() throws Exception {
+        SlaughterhouseServer server = new SlaughterhouseServer();
+        server.run();
     }
 
     @Test
@@ -92,4 +93,7 @@ public class SlaughterHouseTest {
 
         assertTrue(latch.await(1, TimeUnit.SECONDS), "The response should be received within 1 second");
     }
+
+
+
 }
