@@ -13,10 +13,9 @@ import com.example.grpc.SlaughterhouseProto.Recall;
 import com.example.grpc.SlaughterhouseProto.Tray;
 import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
-import org.example.Controller.SlaughterhouseServiceImpl;
+import org.example.Service.SlaughterhouseServiceImpl;
 
 import java.sql.*;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;

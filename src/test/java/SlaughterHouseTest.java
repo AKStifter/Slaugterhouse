@@ -2,12 +2,10 @@ import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
 import io.grpc.stub.StreamObserver;
 import org.example.SlaughterhouseServer;
-import org.example.Controller.SlaughterhouseServiceImpl;
+import org.example.Service.SlaughterhouseServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 

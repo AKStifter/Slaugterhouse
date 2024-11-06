@@ -1,4 +1,4 @@
-package org.example.Controller;
+package org.example.Service;
 
 import com.example.grpc.SlaughterhouseProto;
 import com.example.grpc.SlaughterhouseServiceGrpc;
