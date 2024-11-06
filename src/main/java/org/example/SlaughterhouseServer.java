@@ -32,7 +32,7 @@ public class SlaughterhouseServer implements CommandLineRunner {
     public static final Map<Integer, Animal> animals = new HashMap<>();
     public static final Map<Integer, Product> products = new HashMap<>();
 
-    private static void initializeData() throws SQLException {
+    private void initializeData() throws SQLException {
         String animalQuery = "SELECT ID, Species, Weight FROM slaughterhouse.animal";
         try {
             jdbcTemplate.query(animalQuery, (rs, rowNum) -> {
