@@ -1,12 +1,16 @@
 package org.example;
 
+import com.example.grpc.SlaughterhouseProto;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
-
+import com.example.grpc.SlaughterhouseProto.Part;
+import com.example.grpc.SlaughterhouseProto.ProductAnimal;
+import com.example.grpc.SlaughterhouseProto.Recall;
+import com.example.grpc.SlaughterhouseProto.Tray;
 import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
 import org.example.Controller.SlaughterhouseServiceImpl;
@@ -29,8 +33,13 @@ public class SlaughterhouseServer implements CommandLineRunner {
     @Autowired
     private SlaughterhouseServiceImpl slaughterhouseService;
 
-    public static final Map<Integer, Animal> animals = new HashMap<>();
-    public static final Map<Integer, Product> products = new HashMap<>();
+    public static final Map<Integer, SlaughterhouseProto.Animal> animals = new HashMap<>();
+    public static final Map<Integer, SlaughterhouseProto.Product> products = new HashMap<>();
+    public static final Map<Integer, SlaughterhouseProto.Part> parts = new HashMap<>();
+    public static final Map<Integer, SlaughterhouseProto.ProductAnimal> productAnimals = new HashMap<>();
+    public static final Map<Integer, SlaughterhouseProto.ProductPart> productParts = new HashMap<>();
+    public static final Map<Integer, SlaughterhouseProto.Recall> recalls = new HashMap<>();
+    public static final Map<Integer, SlaughterhouseProto.Tray> trays = new HashMap<>();
 
     private void initializeData() throws SQLException {
         String animalQuery = "SELECT ID, Species, Weight FROM slaughterhouse.animal";
@@ -77,7 +86,18 @@ public class SlaughterhouseServer implements CommandLineRunner {
         if (scanner.nextLine().equalsIgnoreCase("C")) {
             for (Animal animal : animals.values())
                 System.out.println("Loaded Animal: ID=" + animal.getId() + ", Species=" + animal.getSpecies() + ", Weight=" + animal.getWeight());
+            System.out.println("View Available Products");
+            if (scanner.nextLine().equalsIgnoreCase("C" )){
+                for (Product product : products.values())
+                    System.out.println("Loaded Product: ID=" + product.getId() + ", Animals=" + product.getAnimalIdsList());
+            }
+            System.out.println("To view product parts");
+            if (scanner.nextLine().equalsIgnoreCase("C" )){
+                for (SlaughterhouseProto.ProductPart productPart : productParts.values())
+                    System.out.println("Loaded ProductPart: ID=" +  ", ProductID=" + productPart.getProductId() + ", PartID=" + productPart.getPartId());
+            }
         }
+
 
         // type 'exit' to stop the server in the terminal
         while (!scanner.nextLine().equalsIgnoreCase("exit")) {

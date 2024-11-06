@@ -58,4 +58,9 @@ message Tray {
 service SlaughterhouseService {
     rpc GetAnimalInfo (Product) returns (Animal);
     rpc GetProductInfo (Animal) returns (Product);
+    rpc GetPartInfo (Part) returns (Part);
+    rpc GetProductAnimal (ProductAnimal) returns (ProductAnimal);
+    rpc GetProductPart (ProductPart) returns (ProductPart);
+    rpc GetRecall (Recall) returns (Recall);
+    rpc GetTray (Tray) returns (Tray);
 }
