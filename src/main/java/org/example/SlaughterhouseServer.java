@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
 
@@ -47,12 +48,12 @@ public class SlaughterhouseServer implements CommandLineRunner {
             e.printStackTrace();
         }
 
-        // Adding sample data
+        // Adding sample data probably not needed now
         animals.put(1, Animal.newBuilder().setId(1).setRegistrationNumber("ANIMAL001").setSpecies(":Cow").setWeight(500).build());
         animals.put(2, Animal.newBuilder().setId(2).setRegistrationNumber("ANIMAL002").setSpecies(":Pig").setWeight(250).build());
         // ... (other sample animals)
 
-        // Adding sample products (associated with animals)
+        // Adding sample products (associated with animals) .. same as this
         products.put(1, Product.newBuilder().setId(1).addAnimalIds(1).build());
         products.put(2, Product.newBuilder().setId(2).addAnimalIds(2).build());
     }
@@ -63,7 +64,7 @@ public class SlaughterhouseServer implements CommandLineRunner {
 
         Server server = ServerBuilder.forPort(50051)
                 .addService(slaughterhouseService)
-                .build();
+                .build();     // It sets up our data and gRPC server.
 
         // Start the server
         server.start();
@@ -78,14 +79,29 @@ public class SlaughterhouseServer implements CommandLineRunner {
                 System.out.println("Loaded Animal: ID=" + animal.getId() + ", Species=" + animal.getSpecies() + ", Weight=" + animal.getWeight());
         }
 
-        // type 'exit' to stop the server
+        // type 'exit' to stop the server in the terminal
         while (!scanner.nextLine().equalsIgnoreCase("exit")) {
             System.out.println("Type 'exit' to shut down the server.");
         }
 
-        // Stop the server
+        // Stops the server
         System.out.println("Shutting down the server...");
+        if (server != null) {
+            server.shutdown();
+            try {
+                if (!server.awaitTermination(30,TimeUnit.SECONDS)) {
+                    server.shutdownNow();
+                    if (!server.awaitTermination(30, TimeUnit.SECONDS)) {
+                        System.err.println("Server did not terminate");
+                    }
+                }
+            } catch (InterruptedException e) {
+                server.shutdownNow();
+                Thread.currentThread().interrupt();
+            }
+        }
         server.shutdownNow();
+        System.exit(0);
 
 
     }

@@ -5,7 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class Main {
-  public static void main(String[] args) {
-    SpringApplication.run(Main.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
 }
+
+/**
+ * The @SpringBootApplication tag tells Spring that this is the main class
+ * It sets up a lot automatically.
+ * <p>
+ * The main method  tells Spring to start up and
+ * get everything ready for our slaughterhouse  to run.
+ */
