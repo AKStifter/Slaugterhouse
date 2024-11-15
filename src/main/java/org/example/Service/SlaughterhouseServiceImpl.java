@@ -10,42 +10,36 @@ import org.springframework.stereotype.Service;
 public class SlaughterhouseServiceImpl extends SlaughterhouseServiceGrpc.SlaughterhouseServiceImplBase {
 
     @Override
-    public void getAnimalInfo(SlaughterhouseProto.Product request, StreamObserver<SlaughterhouseProto.Animal> responseObserver) {
-        if (request.getAnimalIdsCount() > 0) {
-            int animalId = request.getAnimalIds(0);  // Get the first animal ID
-            SlaughterhouseProto.Animal animal = SlaughterhouseServer.animals.get(animalId);   // from the "database"
+    public void getAnimalInfo(SlaughterhouseProto.AnimalRequest request, StreamObserver<SlaughterhouseProto.Animal> responseObserver) {
+        int animalId = request.getId();
+        SlaughterhouseProto.Animal animal = SlaughterhouseServer.animals.get(animalId);
 
-            if (animal != null) {
-                // Send the animal information
-                responseObserver.onNext(animal);
-            } else {
-                responseObserver.onError(new Exception("Animal not found"));
-            }
+        if (animal != null) {
+            responseObserver.onNext(animal);
         } else {
-            responseObserver.onError(new Exception("No animal IDs associated with the product"));
+            responseObserver.onError(new Exception("Animal not found"));
         }
         responseObserver.onCompleted();
     }
 
     @Override
-    public void getProductInfo(SlaughterhouseProto.Animal request, StreamObserver<SlaughterhouseProto.Product> responseObserver) {
-        int animalId = request.getId();
+    public void getProductInfo(SlaughterhouseProto.ProductRequest request, StreamObserver<SlaughterhouseProto.Product> responseObserver) {
+        int productId = request.getId();
+        SlaughterhouseProto.Product product = SlaughterhouseServer.products.get(productId);
 
-        for (SlaughterhouseProto.Product product : SlaughterhouseServer.products.values()) {
-            if (product.getAnimalIdsList().contains(animalId)) {
-                // Send the product information
-                responseObserver.onNext(product);
-                responseObserver.onCompleted();
-                return;
-            }
+        if (product != null) {
+            responseObserver.onNext(product);
+        } else {
+            responseObserver.onError(new Exception("Product not found"));
         }
-        responseObserver.onError(new Exception("No product found for this animal"));
+        responseObserver.onCompleted();
     }
 
     @Override
-    public void getPartInfo(SlaughterhouseProto.Part request, StreamObserver<SlaughterhouseProto.Part> responseObserver) {
-        // Implementation for getting part info
-        SlaughterhouseProto.Part part = SlaughterhouseServer.parts.get(request.getId());
+    public void getPartInfo(SlaughterhouseProto.PartRequest request, StreamObserver<SlaughterhouseProto.Part> responseObserver) {
+        int partId = request.getId();
+        SlaughterhouseProto.Part part = SlaughterhouseServer.parts.get(partId);
+
         if (part != null) {
             responseObserver.onNext(part);
         } else {
@@ -55,10 +49,10 @@ public class SlaughterhouseServiceImpl extends SlaughterhouseServiceGrpc.Slaught
     }
 
     @Override
-    public void getProductAnimal(SlaughterhouseProto.ProductAnimal request, StreamObserver<SlaughterhouseProto.ProductAnimal> responseObserver) {
-        // Implementation for getting product-animal association
-        // This is a placeholder implementation. You'll need to adjust it based on how you store this data.
-        SlaughterhouseProto.ProductAnimal productAnimal = SlaughterhouseServer.productAnimals.get(request.getProductId());
+    public void getProductAnimal(SlaughterhouseProto.ProductAnimalRequest request, StreamObserver<SlaughterhouseProto.ProductAnimal> responseObserver) {
+        int productId = request.getProductId();
+        SlaughterhouseProto.ProductAnimal productAnimal = SlaughterhouseServer.productAnimals.get(productId);
+
         if (productAnimal != null) {
             responseObserver.onNext(productAnimal);
         } else {
@@ -68,10 +62,10 @@ public class SlaughterhouseServiceImpl extends SlaughterhouseServiceGrpc.Slaught
     }
 
     @Override
-    public void getProductPart(SlaughterhouseProto.ProductPart request, StreamObserver<SlaughterhouseProto.ProductPart> responseObserver) {
-        // getting product-part association
-    // need to adjust it based on how you store this data.
-        SlaughterhouseProto.ProductPart productPart = SlaughterhouseServer.productParts.get(request.getProductId());
+    public void getProductPart(SlaughterhouseProto.ProductPartRequest request, StreamObserver<SlaughterhouseProto.ProductPart> responseObserver) {
+        int productId = request.getProductId();
+        SlaughterhouseProto.ProductPart productPart = SlaughterhouseServer.productParts.get(productId);
+
         if (productPart != null) {
             responseObserver.onNext(productPart);
         } else {
@@ -81,8 +75,10 @@ public class SlaughterhouseServiceImpl extends SlaughterhouseServiceGrpc.Slaught
     }
 
     @Override
-    public void getRecall(SlaughterhouseProto.Recall request, StreamObserver<SlaughterhouseProto.Recall> responseObserver) {
-        SlaughterhouseProto.Recall recall = SlaughterhouseServer.recalls.get(request.getId());
+    public void getRecall(SlaughterhouseProto.RecallRequest request, StreamObserver<SlaughterhouseProto.Recall> responseObserver) {
+        int recallId = request.getId();
+        SlaughterhouseProto.Recall recall = SlaughterhouseServer.recalls.get(recallId);
+
         if (recall != null) {
             responseObserver.onNext(recall);
         } else {
@@ -92,17 +88,15 @@ public class SlaughterhouseServiceImpl extends SlaughterhouseServiceGrpc.Slaught
     }
 
     @Override
-    public void getTray(SlaughterhouseProto.Tray request, StreamObserver<SlaughterhouseProto.Tray> responseObserver) {
-        SlaughterhouseProto.Tray tray = SlaughterhouseServer.trays.get(request.getId());
+    public void getTray(SlaughterhouseProto.TrayRequest request, StreamObserver<SlaughterhouseProto.Tray> responseObserver) {
+        int trayId = request.getId();
+        SlaughterhouseProto.Tray tray = SlaughterhouseServer.trays.get(trayId);
+
         if (tray != null) {
             responseObserver.onNext(tray);
         } else {
             responseObserver.onError(new Exception("Tray not found"));
         }
-        responseObserver.onCompleted();    }
-
-
-
-
-
+        responseObserver.onCompleted();
+    }
 }

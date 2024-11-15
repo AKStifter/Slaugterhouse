@@ -7,60 +7,199 @@ option java_outer_classname = "SlaughterhouseProto";
 
 // Message definitions
 message Animal {
-    int32 id = 1;
-    string registration_number = 2;
-    string species = 3;
-    double weight = 4;
-    string origin = 5;
-    string arrival_date = 6;
+  int32 id = 1;
+  string registration_number = 2;
+  string species = 3;
+  double weight = 4;
+  string origin = 5;
+  string arrival_date = 6;
 }
 
 message Product {
-    int32 id = 1;
-    repeated int32 animal_ids = 2;
-    string name = 3;
-    double weight = 4;
-    string production_date = 5;
+  int32 id = 1;
+  repeated int32 animal_ids = 2;
+  string name = 3;
+  double weight = 4;
+  string production_date = 5;
 }
 
 message Part {
-    int32 id = 1;
-    int32 animal_id = 2;
-    string name = 3;
-    double weight = 4;
+  int32 id = 1;
+  int32 animal_id = 2;
+  string name = 3;
+  double weight = 4;
 }
 
 message ProductAnimal {
-    int32 product_id = 1;
-    int32 animal_id = 2;
+  int32 product_id = 1;
+  int32 animal_id = 2;
+  string type = 3;
+  string tray_ids = 4;
+  string species = 5;
+  string slaughter_date = 6;
+  string condition = 7;
 }
 
 message ProductPart {
-    int32 product_id = 1;
-    int32 part_id = 2;
+  int32 product_id = 1;
+  int32 part_id = 2;
 }
 
 message Recall {
-    int32 id = 1;
-    int32 product_id = 2;
-    string reason = 3;
-    string recall_date = 4;
+  int32 id = 1;
+  int32 product_id = 2;
+  string reason = 3;
+  string recall_date = 4;
 }
 
 message Tray {
-    int32 id = 1;
-    int32 product_id = 2;
-    double max_weight = 3;
-    double current_weight = 4;
+  int32 id = 1;
+  int32 product_id = 2;
+  double max_weight = 3;
+  double current_weight = 4;
+  string Type = 5;
+}
+
+// Request and Response messages
+message AnimalRequest {
+  int32 id = 1;
+}
+
+message ProductRequest {
+  int32 id = 1;
+}
+
+message PartRequest {
+  int32 id = 1;
+}
+
+message ProductAnimalRequest {
+  int32 product_id = 1;
+  int32 animal_id = 2;
+}
+
+message ProductPartRequest {
+  int32 product_id = 1;
+  int32 part_id = 2;
+}
+
+message RecallRequest {
+  int32 id = 1;
+}
+
+message TrayRequest {
+  int32 id = 1;
+}
+
+message AnimalResponse {
+  bool success = 1;
+  string message = 2;
+  Animal animal = 3;
+}
+
+message ProductResponse {
+  bool success = 1;
+  string message = 2;
+  Product product = 3;
+}
+
+message PartResponse {
+  bool success = 1;
+  string message = 2;
+  Part part = 3;
+}
+
+message ProductAnimalResponse {
+  bool success = 1;
+  string message = 2;
+  ProductAnimal product_animal = 3;
+}
+
+message RecallResponse {
+  bool success = 1;
+  string message = 2;
+  Recall recall = 3;
+}
+
+message TrayResponse {
+  bool success = 1;
+  string message = 2;
+  Tray tray = 3;
+}
+
+message DeleteResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message ListRequest {
+  int32 page = 1;
+  int32 page_size = 2;
+}
+
+message ListAnimalResponse {
+  repeated Animal animals = 1;
+  int32 total_count = 2;
+}
+
+message ListProductResponse {
+  repeated Product products = 1;
+  int32 total_count = 2;
+}
+
+message ListPartResponse {
+  repeated Part parts = 1;
+  int32 total_count = 2;
+}
+
+message ListRecallResponse {
+  repeated Recall recalls = 1;
+  int32 total_count = 2;
+}
+
+message ListTrayResponse {
+  repeated Tray trays = 1;
+  int32 total_count = 2;
 }
 
 // Service definition
 service SlaughterhouseService {
-    rpc GetAnimalInfo (Product) returns (Animal);
-    rpc GetProductInfo (Animal) returns (Product);
-    rpc GetPartInfo (Part) returns (Part);
-    rpc GetProductAnimal (ProductAnimal) returns (ProductAnimal);
-    rpc GetProductPart (ProductPart) returns (ProductPart);
-    rpc GetRecall (Recall) returns (Recall);
-    rpc GetTray (Tray) returns (Tray);
+  rpc GetAnimalInfo (AnimalRequest) returns (Animal);
+  rpc GetProductInfo (ProductRequest) returns (Product);
+  rpc GetPartInfo (PartRequest) returns (Part);
+  rpc GetProductAnimal (ProductAnimalRequest) returns (ProductAnimal);
+  rpc GetProductPart (ProductPartRequest) returns (ProductPart);
+  rpc GetRecall (RecallRequest) returns (Recall);
+  rpc GetTray (TrayRequest) returns (Tray);
+  rpc GetSlaughterDate (ProductAnimalRequest) returns (ProductAnimal);
+
+  rpc CreateAnimal (Animal) returns (AnimalResponse);
+  rpc UpdateAnimal (Animal) returns (AnimalResponse);
+  rpc DeleteAnimal (AnimalRequest) returns (DeleteResponse);
+
+  rpc CreateProduct (Product) returns (ProductResponse);
+  rpc UpdateProduct (Product) returns (ProductResponse);
+  rpc DeleteProduct (ProductRequest) returns (DeleteResponse);
+
+  rpc CreatePart (Part) returns (PartResponse);
+  rpc UpdatePart (Part) returns (PartResponse);
+  rpc DeletePart (PartRequest) returns (DeleteResponse);
+
+  rpc CreateProductAnimal (ProductAnimal) returns (ProductAnimalResponse);
+  rpc UpdateProductAnimal (ProductAnimal) returns (ProductAnimalResponse);
+  rpc DeleteProductAnimal (ProductAnimalRequest) returns (DeleteResponse);
+
+  rpc CreateRecall (Recall) returns (RecallResponse);
+  rpc UpdateRecall (Recall) returns (RecallResponse);
+  rpc DeleteRecall (RecallRequest) returns (DeleteResponse);
+
+  rpc CreateTray (Tray) returns (TrayResponse);
+  rpc UpdateTray (Tray) returns (TrayResponse);
+  rpc DeleteTray (TrayRequest) returns (DeleteResponse);
+
+  rpc ListAnimals (ListRequest) returns (ListAnimalResponse);
+  rpc ListProducts (ListRequest) returns (ListProductResponse);
+  rpc ListParts (ListRequest) returns (ListPartResponse);
+  rpc ListRecalls (ListRequest) returns (ListRecallResponse);
+  rpc ListTrays (ListRequest) returns (ListTrayResponse);
 }
