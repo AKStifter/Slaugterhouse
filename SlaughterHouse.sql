@@ -1,11 +1,4 @@
--- Drop existing tables if they exist
-DROP TABLE IF EXISTS slaughterhouse.tray;
-DROP TABLE IF EXISTS slaughterhouse.recall;
-DROP TABLE IF EXISTS slaughterhouse.productpart;
-DROP TABLE IF EXISTS slaughterhouse.productanimal;
-DROP TABLE IF EXISTS slaughterhouse.part;
-DROP TABLE IF EXISTS slaughterhouse.product;
-DROP TABLE IF EXISTS slaughterhouse.animal;
+
 
 -- Create tables with consistent naming
 CREATE TABLE slaughterhouse.animal (
