@@ -60,7 +60,7 @@ message Tray {
   string Type = 5;
 }
 
-// Request and Response messages
+// Request and Response
 message AnimalRequest {
   int32 id = 1;
 }

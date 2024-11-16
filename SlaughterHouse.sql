@@ -1,6 +1,5 @@
 
 
--- Create tables with consistent naming
 CREATE TABLE slaughterhouse.animal (
     id SERIAL PRIMARY KEY,
     species VARCHAR(50),
