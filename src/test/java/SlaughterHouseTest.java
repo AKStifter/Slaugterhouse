@@ -1,7 +1,7 @@
 import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
 import io.grpc.stub.StreamObserver;
-import org.example.SlaughterhouseServer;
+import org.example.CLI.SlaughterhouseServer;
 import org.example.Service.SlaughterhouseServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.CLI;
 
 import com.example.grpc.SlaughterhouseProto;
 import io.grpc.Server;
@@ -143,7 +143,7 @@ public class SlaughterhouseServer implements CommandLineRunner {
                         exit = true;
                         break;
                     default:
-                        System.out.println("Invalid option. Please try again.");
+                        System.out.println("Oops!.... Please try again.");
                 }
             }
 

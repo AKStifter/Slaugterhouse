@@ -3,7 +3,7 @@ package org.example.Service;
 import com.example.grpc.SlaughterhouseProto;
 import com.example.grpc.SlaughterhouseServiceGrpc;
 import io.grpc.stub.StreamObserver;
-import org.example.SlaughterhouseServer;
+import org.example.CLI.SlaughterhouseServer;
 import org.springframework.stereotype.Service;
 
 @Service
