@@ -40,16 +40,16 @@ public class SlaughterhouseServer implements CommandLineRunner {
     private void initializeData() {
         logger.info("Initializing data...");
 
-        String animalQuery = "SELECT id, species, weight,  arrivaldate FROM slaughterhouse.animal";
+        String animalQuery = "SELECT * FROM slaughterhouse.animal";
         try {
             List<Animal> animalList = jdbcTemplate.query(animalQuery, 
                 (rs, rowNum) -> Animal.newBuilder()
                     .setId(rs.getInt("id"))
-                    .setRegistrationNumber(rs.getString("registration_number"))
+                    .setRegistrationNumber(rs.getString("registrationnumber"))
                     .setSpecies(rs.getString("species"))
                     .setWeight(rs.getDouble("weight"))
                     .setOrigin(rs.getString("origin"))
-                    .setArrivalDate(rs.getDate("arrival_date").toString())
+                    .setArrivalDate(rs.getDate("arrivaldate").toString())
                     .build());
             animalList.forEach(animal -> animals.put(animal.getId(), animal));
         } catch (Exception e) {
