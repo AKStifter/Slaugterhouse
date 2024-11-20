@@ -62,11 +62,11 @@ message Tray {
 
 // Request and Response
 message AnimalRequest {
-  int32 id = 1;
+  int32 Id = 1;
 }
 
 message ProductRequest {
-  int32 id = 1;
+   int32 Id = 1;
 }
 
 message PartRequest {
