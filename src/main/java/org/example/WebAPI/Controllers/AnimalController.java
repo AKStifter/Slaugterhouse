@@ -1,8 +1,6 @@
 package org.example.WebAPI.Controllers;
 
-import com.example.grpc.SlaughterhouseProto;
 import com.google.common.collect.Iterables;
-import jakarta.persistence.NamedNativeQuery;
 import org.example.WebAPI.Entities.Animal;
 import org.example.WebAPI.Exceptions.ResourceNotFoundException;
 import org.example.WebAPI.Repositories.AnimalRepository;
@@ -10,26 +8,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 public class AnimalController
 {
 
   @Autowired
   private AnimalRepository animalRepo;
-  private NamedNativeQuery jdbcTemplate;
-  String animalQuery = "SELECT * FROM slaughterhouse.animal";
 
   @PostMapping("/animals")
   @ResponseStatus(HttpStatus.CREATED)
-  public Animal addAnimal(@RequestParam String species, @RequestParam double weight, @RequestParam String origin, @RequestParam String arrival_date) {
+  public Animal addAnimal(@RequestParam String registrationnumber, @RequestParam String species, @RequestParam double weight, @RequestParam String origin, @RequestParam String arrivaldate) {
     Animal animal = new Animal();
 
+    animal.setRegistrationnumber(registrationnumber);
     animal.setSpecies(species);
     animal.setWeight(weight);
     animal.setOrigin(origin);
-    animal.setArrivaldate(arrival_date);
+    animal.setArrivaldate(arrivaldate);
     animalRepo.save(animal);
     return animal;
   }
@@ -49,7 +44,7 @@ public class AnimalController
 
   @GetMapping("/animals/date")
   @ResponseStatus(HttpStatus.OK)
-  public Iterable<Animal> getAnimalByArrival_date(@RequestParam String date)
+  public Iterable<Animal> getAnimalByArrivaldate(@RequestParam String date)
       throws ResourceNotFoundException
   {
     Iterable<Animal> animals = animalRepo.getAnimalByArrivaldate(date);
