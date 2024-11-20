@@ -1,4 +1,3 @@
-import com.example.grpc.SlaughterhouseProto;
 import com.example.grpc.SlaughterhouseProto.Animal;
 import com.example.grpc.SlaughterhouseProto.Product;
 import io.grpc.stub.StreamObserver;
@@ -40,10 +39,7 @@ public class SlaughterHouseTest {
     @Test
     public void testGetAnimalInfo() throws InterruptedException {
         SlaughterhouseServiceImpl service = new SlaughterhouseServiceImpl();
-        Product request1 = Product.newBuilder().addAnimalIds(1).build();
-        SlaughterhouseProto.AnimalRequest request = new SlaughterhouseProto.AnimalRequest(){
-
-        };
+        Product request = Product.newBuilder().addAnimalIds(1).build();
         CountDownLatch latch = new CountDownLatch(1);
 
         service.getAnimalInfo(request, new StreamObserver<Animal>() {
@@ -71,8 +67,7 @@ public class SlaughterHouseTest {
     @Test
     public void testGetProductInfo() throws InterruptedException {
         SlaughterhouseServiceImpl service = new SlaughterhouseServiceImpl();
-        SlaughterhouseProto.ProductRequest request = new SlaughterhouseProto.ProductRequest(1);
-
+        Animal request = Animal.newBuilder().setId(1).build();
         CountDownLatch latch = new CountDownLatch(1);
 
         service.getProductInfo(request, new StreamObserver<Product>() {
